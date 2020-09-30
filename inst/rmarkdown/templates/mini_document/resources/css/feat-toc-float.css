@@ -3,6 +3,8 @@
     min-width: 900px;
     max-width: 62.5%;
     margin: 0 auto;
+  }
+  main {
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto auto;
@@ -24,12 +26,5 @@
     max-height: 85vh;
     overflow-y: auto;
     top: 5px;
-  }
-}
-
-
-@media screen and (max-width: 900px) {
-  header, nav, article {
-    padding: 0 3rem;
   }
 }

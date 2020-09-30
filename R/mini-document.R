@@ -1,7 +1,7 @@
 #' Convert to an HTML document powered by the lightweight CSS framework.
 #'
-#' The output format is HTML5 except. When `framework = "bootstrap"` is
-#' given, the output format is HTML4 and comparable to `rmarkdown::html_document`
+#' The output format is HTML5 in general. If `framework = "bootstrap"` is given,
+#' the output format becomes HTML4 and comparable to `rmarkdown::html_document`
 #' except for the behavior of the `code_folding` option.
 #'
 #' @param framework,theme A string to specify the name of a framework
@@ -19,6 +19,9 @@
 #'  Names are some of "source", "output", "message", "warning", and "error".
 #'  If the list does not have some of the element with the above name,
 #'  they are treated as `"none"`.
+#' @param results_folding Setup results folding by a string, `"none"`, `"show"`,
+#'  or `"hide"`. This feature will fold entire results, including side effects
+#'  such as figures and tables.
 #' @param code_download If `TRUE` and `framework = "bootstrap"`, the output
 #'  includes Rmd file itself and supplies download button of it.
 #' @param math A string to specify math rendering engine (default: `"katex"`).
@@ -44,11 +47,14 @@ mini_document <- function(framework = "sakura",
                           toc = FALSE,
                           toc_float = FALSE,
                           code_folding = c("none", "show", "hide"),
+                          results_folding = c("none", "show", "hide"),
                           code_download = FALSE,
+                          self_contained = TRUE,
                           math = "katex",
+                          template = "default",
                           extra_dependencies = NULL,
                           includes = list(),
-                          template = "default",
+                          keep_md = FALSE,
                           pandoc_args = NULL,
                           ...) {
   framework <- match.arg(framework, c("bootstrap", names(frameworks)))
@@ -58,8 +64,9 @@ mini_document <- function(framework = "sakura",
   fmt <- rmarkdown::html_document(
     theme = if (html5) NULL else theme,
     pandoc_args = spec_pandoc_args(pandoc_args, html5, katex),
-    extra_dependencies =
-      spec_dependencies(extra_dependencies, toc_float, html5, framework, theme),
+    extra_dependencies = spec_dependencies(
+        extra_dependencies, toc && toc_float, html5, framework, theme
+      ),
     template = spec_template(template, html5),
     includes = spec_includes(includes, katex),
     toc = toc,
@@ -67,13 +74,27 @@ mini_document <- function(framework = "sakura",
     code_folding = "none", # As minidown offers different approach
     code_download = code_download && !html5,
     mathjax = if (katex) NULL else math,
+    self_contained = self_contained,
+    keep_md = keep_md,
     ...
   )
 
-  fmt$knitr$opts_chunk[names(default_opts_chunk)] <- default_opts_chunk
-  fmt$knitr$opts_hooks <- spec_opts_hooks(code_folding)
+  code_download_html <- if (code_download && html5) tempfile(fileext = ".html")
 
-  if (html5) fmt$pandoc$to <- "html5"
-
-  fmt
+  rmarkdown::output_format(
+    knitr = rmarkdown::knitr_options(
+      opts_chunk = spec_opts_chunk(results_folding),
+      opts_hooks = spec_opts_hooks(code_folding),
+      knit_hooks = spec_knit_hooks(
+          knit_hook_source = fmt$knitr$knit_hooks$source,
+          results_folding = results_folding
+        )
+    ),
+    pandoc = if (html5) list(to = "html5"),
+    keep_md = keep_md,
+    clean_supporting = self_contained,
+    pre_knit = spec_pre_knit(code_download_html),
+    pre_processor = spec_pre_processor(code_download_html),
+    base_format = fmt
+  )
 }
