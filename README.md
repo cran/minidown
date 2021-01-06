@@ -3,7 +3,7 @@
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/minidown)](https://CRAN.R-project.org/package=minidown)
-[![R build status](https://github.com/atusy/minidown/workflows/R-CMD-check/badge.svg)](https://github.com/atusy/minidown/actions)
+[![R-CMD-check](https://github.com/atusy/minidown/workflows/R-CMD-check/badge.svg)](https://github.com/atusy/minidown/actions)
 ![Total downloads](https://cranlogs.r-pkg.org/badges/grand-total/minidown)
 ![Monthly downloads](https://cranlogs.r-pkg.org/badges/minidown)
 <!-- badges: end -->
@@ -26,7 +26,6 @@ remotes::install_github("atusy/minidown")
       [Awesome CSS Frameworks](https://github.com/troxler/awesome-css-frameworks)
 * Code folding
   * for source, output, message, warning, and error
-* Accordions
 * Tooltip
 * Floating TOC
 * Math with KaTeX
@@ -35,6 +34,16 @@ remotes::install_github("atusy/minidown")
     * removing math section to support KaTeX CDN even if self contained
     * wrapping body paragraphs by the `<article>` tag.
   * Output format is HTML4 as an exception if `framework = "bootstrap"`.
+
+## Live Examples
+
+- Package vignettes from
+    - [digest](https://cran.r-project.org/package=digest),
+      [littler](https://cran.r-project.org/package=littler),
+      [spdlog](https://cran.r-project.org/package=RcppSpdlog),
+      and
+      [tidyCpp](https://cran.r-project.org/package=tidyCpp)
+      by [\@eddelbuettel](https://github.com/eddelbuettel)
 
 ## Philosophy
 
