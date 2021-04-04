@@ -9,8 +9,11 @@ mini_document(
   theme = "default",
   toc = FALSE,
   toc_float = FALSE,
+  toc_highlight = FALSE,
+  section_divs = TRUE,
   code_folding = c("none", "show", "hide"),
   results_folding = c("none", "show", "hide"),
+  tabset = FALSE,
   code_download = FALSE,
   self_contained = TRUE,
   math = "katex",
@@ -34,6 +37,12 @@ CSS frameworks and their themes.}
 \item{toc_float}{TRUE to float the table of contents to the left of the main
 document content.}
 
+\item{toc_highlight}{This is an experimental feature. \code{TRUE} highlights the
+table of contents according to the browser's viewport.}
+
+\item{section_divs}{Wrap sections in <div> tags, and attach identifiers to the
+enclosing <div> rather than the header itself.}
+
 \item{code_folding}{Setup code folding by a string or a named list.
 A choice for the string are \code{"none"} to disable,
 \code{"show"} to enable and show all by default), and
@@ -46,6 +55,13 @@ they are treated as \code{"none"}.}
 \item{results_folding}{Setup results folding by a string, \code{"none"}, \code{"show"},
 or \code{"hide"}. This feature will fold entire results, including side effects
 such as figures and tables.}
+
+\item{tabset}{\code{TRUE} converts sections to tabs if they belong to the
+\code{tabset}-class section. The tabs inherit names from the corresponding
+sections. Unlike \code{rmarkdown::html_document}, the tabs can be navigated by
+table of contents, and can be shared by unique URLs. Note that
+\code{framework = "bootstrap"} falls back to the native feature of
+\code{rmarkdown::html_document}. This feature also requires \code{section_divs = TRUE}.}
 
 \item{code_download}{If \code{TRUE} and \code{framework = "bootstrap"}, the output
 includes Rmd file itself and supplies download button of it.}

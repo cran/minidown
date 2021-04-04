@@ -2,12 +2,7 @@ Package: minidown
 Type: Package
 Title: Create Simple Yet Powerful HTML Documents with Light Weight CSS
         Frameworks
-Version: 0.0.3
-Author: Atsushi Yasumoto [aut, cph, cre]
-    (<https://orcid.org/0000-0002-8335-495X>),
-  Angelos Chalaris [aut] (mini.css),
-  Mitesh Shah [aut] (sakura),
-  Kognise [aut] (Water.css)
+Version: 0.1.0
 Authors@R: c(
     person(given = "Atsushi",
            family = "Yasumoto",
@@ -18,6 +13,10 @@ Authors@R: c(
            family = "Chalaris",
            role = "aut",
            comment = "mini.css"),
+    person(given = "Susam",
+           family = "Pal",
+           role = "aut",
+           comment = "spcss"),
     person(given = "Mitesh",
            family = "Shah",
            role = "aut",
@@ -29,21 +28,26 @@ Authors@R: c(
     )
 Maintainer: Atsushi Yasumoto <atusy.rpkg@gmail.com>
 Description: Create minimal, responsive, and style-agnostic HTML documents with
-    the lightweight CSS frameworks such as 'sakura', 'Water.css', and 'mini.css'.
-    Powerful features include floating table of contents as a sidebar,
-    code folding of source, output, message, warning, and error, and accordion
-    menus. They work without JavaScript.
+    the lightweight CSS frameworks such as 'sakura', 'Water.css', and 'spcss'.
+    Powerful features include table of contents floating as a sidebar,
+    folding codes and results, and more.
 URL: https://minidown.atusy.net, https://github.com/atusy/minidown
 BugReports: https://github.com/atusy/minidown/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 Language: en-US
-LazyData: true
 RoxygenNote: 7.1.1
 Imports: htmltools, knitr, rmarkdown, xfun
-Suggests: testthat (>= 2.1.0)
+Suggests: callr, dplyr, purrr, testthat (>= 2.1.0), tidyr, tibble
 SystemRequirements: pandoc (>= 2.7.2) - http://pandoc.org
+VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-01-05 11:15:58 UTC; rstudio
+Packaged: 2021-04-04 13:09:00 UTC; rstudio
+Author: Atsushi Yasumoto [aut, cph, cre]
+    (<https://orcid.org/0000-0002-8335-495X>),
+  Angelos Chalaris [aut] (mini.css),
+  Susam Pal [aut] (spcss),
+  Mitesh Shah [aut] (sakura),
+  Kognise [aut] (Water.css)
 Repository: CRAN
-Date/Publication: 2021-01-06 11:30:02 UTC
+Date/Publication: 2021-04-04 13:40:02 UTC

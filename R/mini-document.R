@@ -11,6 +11,8 @@
 #'  CSS frameworks and their themes.
 #' @param toc_float TRUE to float the table of contents to the left of the main
 #'  document content.
+#' @param toc_highlight This is an experimental feature. `TRUE` highlights the
+#'  table of contents according to the browser's viewport.
 #' @param code_folding Setup code folding by a string or a named list.
 #'  A choice for the string are `"none"` to disable,
 #'  `"show"` to enable and show all by default), and
@@ -22,6 +24,12 @@
 #' @param results_folding Setup results folding by a string, `"none"`, `"show"`,
 #'  or `"hide"`. This feature will fold entire results, including side effects
 #'  such as figures and tables.
+#' @param tabset `TRUE` converts sections to tabs if they belong to the
+#'  `tabset`-class section. The tabs inherit names from the corresponding
+#'  sections. Unlike `rmarkdown::html_document`, the tabs can be navigated by
+#'  table of contents, and can be shared by unique URLs. Note that
+#'  `framework = "bootstrap"` falls back to the native feature of
+#'  `rmarkdown::html_document`. This feature also requires `section_divs = TRUE`.
 #' @param code_download If `TRUE` and `framework = "bootstrap"`, the output
 #'  includes Rmd file itself and supplies download button of it.
 #' @param math A string to specify math rendering engine (default: `"katex"`).
@@ -46,8 +54,11 @@ mini_document <- function(framework = "sakura",
                           theme = "default",
                           toc = FALSE,
                           toc_float = FALSE,
+                          toc_highlight = FALSE,
+                          section_divs = TRUE,
                           code_folding = c("none", "show", "hide"),
                           results_folding = c("none", "show", "hide"),
+                          tabset = FALSE,
                           code_download = FALSE,
                           self_contained = TRUE,
                           math = "katex",
@@ -57,7 +68,7 @@ mini_document <- function(framework = "sakura",
                           keep_md = FALSE,
                           pandoc_args = NULL,
                           ...) {
-  framework <- match.arg(framework, c("bootstrap", names(frameworks)))
+  framework <- match.arg(framework, c("bootstrap", names(frameworks), "all"))
   html5 <- framework != "bootstrap"
   katex <- identical(math, "katex")
 
@@ -65,8 +76,14 @@ mini_document <- function(framework = "sakura",
     theme = if (html5) NULL else theme,
     pandoc_args = spec_pandoc_args(pandoc_args, html5, katex),
     extra_dependencies = spec_dependencies(
-        extra_dependencies, toc && toc_float, html5, framework, theme
-      ),
+        extra_dependencies,
+        html5 = html5,
+        framework = framework,
+        theme = theme,
+        tabset = tabset && html5 && section_divs,
+        toc_float = toc && toc_float,
+        toc_highlight = toc_highlight
+    ),
     template = spec_template(template, html5),
     includes = spec_includes(includes, katex),
     toc = toc,
@@ -95,6 +112,7 @@ mini_document <- function(framework = "sakura",
     clean_supporting = self_contained,
     pre_knit = spec_pre_knit(code_download_html),
     pre_processor = spec_pre_processor(code_download_html),
+    post_processor = spec_post_processor(results_folding),
     base_format = fmt
   )
 }
