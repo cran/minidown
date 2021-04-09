@@ -1,7 +1,7 @@
-6264c36d8ab698c6b5a60f57dc01d8c3 *DESCRIPTION
+17b08339bf4eee277c6e0d7a010ad726 *DESCRIPTION
 579e61721c7372ae7da14ddf9c6d132a *LICENSE
 2666411bc62726f478dfab3196666b80 *NAMESPACE
-b3d783b6b7ab19964c12e91159a89b8b *NEWS.md
+f6509dd48aad331b89c0f576cc34c378 *NEWS.md
 d75e26220c9f96d62157ff0c36e480da *R/default.R
 640f0b3da7b107c2635bec727a605348 *R/download-rmd.R
 fd17d4c46747f32e066c8be880c12730 *R/frameworks.R
@@ -16,7 +16,7 @@ a43e7806df079ba8397ff9c5c568f4c0 *R/spec-knitr-knit-hooks.R
 055af8d02933f9131f14eb9f58d6f2fc *R/spec-knitr-opts-chunk.R
 43b214d8b29257e97d3b42287dc5bbf7 *R/spec-knitr-opts-hooks.R
 398bf20630c6a5b25b81ec07bfce1f5e *R/spec-pandoc-args.R
-927e5d7fa8ef5c2dc124b221cf7ccc23 *R/spec-post-processor.R
+c133303a3f5379d979195cd3def1d05b *R/spec-post-processor.R
 d12588e3936953bb9f76d33ee67f6caa *R/spec-pre-knit.R
 971ea220ac2f13c6dc9fd40d7debdedc *R/spec-pre-processor.R
 0288d7269771e8afe79e59c79e2ba5d4 *R/spec-template.R
@@ -60,7 +60,7 @@ ad1e1ea4864f04a0f601d12d02e55ce8 *inst/rmarkdown/lua/code-folding.lua
 838dcf822ccee09852c3a38432f6a541 *tests/testthat.R
 7c821bbbd6c04a33c71d8e060abeb4a8 *tests/testthat/test-frameworks.R
 11542d01c0148c21e8daa34e00c919d9 *tests/testthat/test-hook-code-folding.R
-40ca01f2e52739e4ab6d8924ba2c16b8 *tests/testthat/test-mini-document.R
+d0425a37b7e5efe534b9c80c5e427434 *tests/testthat/test-mini-document.R
 61c3c8de12167d021fce1f8d5e0a754d *tests/testthat/test-spec-dependencies.R
 a3d81be9af379d3362d86ff401903230 *tests/testthat/test-spec-includes.R
 2c0f1e3c2ec4efe95ce6d78388452d66 *vignettes/Writing-vignettes-with-minidown.Rmd

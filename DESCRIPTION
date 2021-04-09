@@ -2,7 +2,7 @@ Package: minidown
 Type: Package
 Title: Create Simple Yet Powerful HTML Documents with Light Weight CSS
         Frameworks
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Atsushi",
            family = "Yasumoto",
@@ -42,7 +42,7 @@ Suggests: callr, dplyr, purrr, testthat (>= 2.1.0), tidyr, tibble
 SystemRequirements: pandoc (>= 2.7.2) - http://pandoc.org
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-04-04 13:09:00 UTC; rstudio
+Packaged: 2021-04-09 03:53:16 UTC; rstudio
 Author: Atsushi Yasumoto [aut, cph, cre]
     (<https://orcid.org/0000-0002-8335-495X>),
   Angelos Chalaris [aut] (mini.css),
@@ -50,4 +50,4 @@ Author: Atsushi Yasumoto [aut, cph, cre]
   Mitesh Shah [aut] (sakura),
   Kognise [aut] (Water.css)
 Repository: CRAN
-Date/Publication: 2021-04-04 13:40:02 UTC
+Date/Publication: 2021-04-09 05:50:02 UTC
