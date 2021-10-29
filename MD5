@@ -1,16 +1,16 @@
-533bde8c3098310a3e7d31d67fa1b6ab *DESCRIPTION
+8b33555165260ccb4755945c65c77d99 *DESCRIPTION
 579e61721c7372ae7da14ddf9c6d132a *LICENSE
 2666411bc62726f478dfab3196666b80 *NAMESPACE
-a8de042f49035d5b3fc6327e5c2d290a *NEWS.md
+dbe5f7fb0613fc64fb958c291e2413a7 *NEWS.md
 d75e26220c9f96d62157ff0c36e480da *R/default.R
 640f0b3da7b107c2635bec727a605348 *R/download-rmd.R
 fd17d4c46747f32e066c8be880c12730 *R/frameworks.R
 3142d00d1bf77aa217e0bad2cd4954bf *R/hook-code-folding.R
 4e3634cbc2d8ff436a3603c04e61b3d0 *R/hook-results-folding.R
-089b95d2117d5615a3b90a9c54f53c97 *R/mini-document.R
+67ebb2c8f03ac6653be80ff3e4044c3f *R/mini-document.R
 12f2b0f54df0aa7c4ce9cf8d2321c3dc *R/pandoc.R
 d224169aece48ec2a95de0a2004e7d4d *R/path.R
-ecc0f98912df374def16b07dab2ac2d1 *R/spec-dependencies.R
+aacd395ad8c0c4faf7eb2008de44679e *R/spec-dependencies.R
 c225bb70593f960bb3bbd343835eb237 *R/spec-includes.R
 a43e7806df079ba8397ff9c5c568f4c0 *R/spec-knitr-knit-hooks.R
 d16ff232112cb2f0c219ef9a0e504471 *R/spec-knitr-opts-chunk.R
@@ -26,7 +26,7 @@ bb27c51308f034348b6d4c45ec29f661 *build/vignette.rds
 0074f663e4253a797c2d6b1c2726443a *inst/WORDLIST
 3360cd872af6939f597afd19dfa99fe7 *inst/doc/Writing-vignettes-with-minidown.R
 2c0f1e3c2ec4efe95ce6d78388452d66 *inst/doc/Writing-vignettes-with-minidown.Rmd
-bd1681bf899c0ad7f64c0b5042fb0257 *inst/doc/Writing-vignettes-with-minidown.html
+3cc28a6d21e0769e04b8d27f774ee7b8 *inst/doc/Writing-vignettes-with-minidown.html
 48472d7850bccbcae18ecd660fe114ca *inst/frameworks/mini/mini-dark.min.css
 301c8e6926970b7bff7e3d30e7927837 *inst/frameworks/mini/mini-default.min.css
 bc1fc9bf4f01c765cb6f2e0147fba398 *inst/frameworks/mini/mini-nord.min.css
@@ -38,7 +38,7 @@ da13912b956cd91838546f9fb79adee2 *inst/frameworks/sakura/sakura-vader.css
 e02fb4323fb28c8c947da963b010ce91 *inst/frameworks/spcss/spcss.min.css
 38567cf1b1e84aca4bdcda64ad575b71 *inst/frameworks/water/dark.min.css
 4eea6d7d6da887df650c5805796fedd5 *inst/frameworks/water/light.min.css
-a0c7e90496a747a8e3f1b77df4d22edf *inst/rmarkdown/html/highlightToC/highlightToC.js
+17914bf49cef9c77e040046625bfe3fc *inst/rmarkdown/html/highlightToC/highlightToC.js
 624198ee6faa867dd670393fb8f5a2d9 *inst/rmarkdown/html/katex/partial.html
 fcf2f1b6d4fa52f8bcb791aebc4ac863 *inst/rmarkdown/html/styles/common.css
 ece2144bf529e8094a3bce0168e6c9c1 *inst/rmarkdown/html/styles/feat-toc-float.css
@@ -56,7 +56,7 @@ d2662cd307f7413f97528e4cfc15cef0 *inst/rmarkdown/templates/mini_document/skeleto
 424a06c65ac639aeca257debc20557a3 *inst/rmarkdown/templates/mini_document/template.yaml
 8501365d578a6d158113f8a29ba8cf46 *man/download_rmd_button.Rd
 351fa4440e1949406fbdee1215520d89 *man/frameworks.Rd
-49b2e6f7682ac0d77677ea2ee9e46c10 *man/mini_document.Rd
+e86989f6787e61c8f81725b5a3d5bbd8 *man/mini_document.Rd
 838dcf822ccee09852c3a38432f6a541 *tests/testthat.R
 7c821bbbd6c04a33c71d8e060abeb4a8 *tests/testthat/test-frameworks.R
 11542d01c0148c21e8daa34e00c919d9 *tests/testthat/test-hook-code-folding.R
