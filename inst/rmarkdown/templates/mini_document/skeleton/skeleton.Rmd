@@ -37,7 +37,7 @@ If you haven't installed the `minidown` package on R, install it by
 remotes::install_github('atusy/minidown')
 ```
 
-Documentation is ready at [here](pkgdown/index.html).
+Documentation is ready at [here](https://minidown.atusy.net/pkgdown/index.html).
 
 # Frameworks and themes
 
@@ -62,6 +62,7 @@ frameworks <- lapply(
   )
 
 frameworks %>%
+  dplyr::mutate(framework = factor(framework, levels = unique(framework))) %>%
   dplyr::group_by(framework) %>%
   dplyr::summarise(theme = paste(theme, collapse = ', ')) %>%
   knitr::kable(escape=FALSE)
@@ -267,7 +268,7 @@ knitr::opts_knit$set(results.folding=NULL)
 `r ''````
 
 
-`r ''````{r, result.folding='hide'}
+`r ''````{r, results.folding='hide'}
 'This chunk hides not fold results'
 `r ''````
 ~~~

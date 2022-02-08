@@ -1,3 +1,28 @@
+# minidown 0.4.0
+
+* Fix `summary.results` chunk option not working as expected (#87)
+
+* Changed querySelector in `highlightToC.js` so that ToC can be querried regardless of `--id-prefix` is given to Pandoc (#85).
+
+* Introduce SASS to unify and minify CSS files. Current implementation do not include options for customizations.
+  Also, the sakura and water CSS frameworks are updated to the latest versions.
+  At the same time, the updated water CSS framework allows customizations via CSS variables.
+  See files under `inst/frameworks/water` for available variables (#84).
+
+* `mini_document` gains `"katex_serverside"` as a new oprion for the `katex` parameter.
+  `"katex_serverside"` renders math well on shiny-based runtimes, too.
+  Note that this feature may change in a later version in order to incorporate the generalized feature from [rstudio/rmarkdown#1940](https://github.com/rstudio/rmarkdown/pull/1940) (#81, #88). 
+
+* Document how to use `_output.yml` in package vignettes (#80).
+
+* Tabsets allow markups within tabmenus. The markups inherits from the content of corresponding headings (#78).
+
+* Tabsets can activate nested tab of a selection on `hashChange` or `load` (#76, #77).
+
+* Tabset determines initially active tab based on `location.hash` (#75).
+
+* Fix tabset should not prevent rendering HTML widgets. This change let tabsets be built on load instead of DOMContentLoaded  (#74).
+
 # minidown 0.3.0
 
 * Fix TOC highlighting doesn't work with non-ASCII headings (#62)

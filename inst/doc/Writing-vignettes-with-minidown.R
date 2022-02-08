@@ -31,7 +31,7 @@ formats <- list(
     code_folding = "hide",
     tabset = TRUE,
     code_download = TRUE,
-    math = "katex"
+    math = "katex_serverside"
   ),
   html_document = rmarkdown::html_document()
 )
@@ -66,7 +66,7 @@ knitr::kable(tibble::enframe(
 #      code_folding = "hide",
 #      tabset = TRUE,
 #      code_download = TRUE,
-#      math = "katex"
+#      math = "katex_serverside"
 #    ),
 #    html_document = rmarkdown::html_document()
 #  )

@@ -12,19 +12,19 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <style>
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -44,7 +44,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -79,15 +79,126 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
-  <script src="data:application/javascript;base64,Ly8gUGFuZG9jIDIuOSBhZGRzIGF0dHJpYnV0ZXMgb24gYm90aCBoZWFkZXIgYW5kIGRpdi4gV2UgcmVtb3ZlIHRoZSBmb3JtZXIgKHRvCi8vIGJlIGNvbXBhdGlibGUgd2l0aCB0aGUgYmVoYXZpb3Igb2YgUGFuZG9jIDwgMi44KS4KZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKGUpIHsKICB2YXIgaHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJkaXYuc2VjdGlvbltjbGFzcyo9J2xldmVsJ10gPiA6Zmlyc3QtY2hpbGQiKTsKICB2YXIgaSwgaCwgYTsKICBmb3IgKGkgPSAwOyBpIDwgaHMubGVuZ3RoOyBpKyspIHsKICAgIGggPSBoc1tpXTsKICAgIGlmICghL15oWzEtNl0kL2kudGVzdChoLnRhZ05hbWUpKSBjb250aW51ZTsgIC8vIGl0IHNob3VsZCBiZSBhIGhlYWRlciBoMS1oNgogICAgYSA9IGguYXR0cmlidXRlczsKICAgIHdoaWxlIChhLmxlbmd0aCA+IDApIGgucmVtb3ZlQXR0cmlidXRlKGFbMF0ubmFtZSk7CiAgfQp9KTsK"></script>
-  <link href="data:text/css,%0A%0Ahtml%20%7B%0Afont%2Dsize%3A%2062%2E5%25%3B%0Afont%2Dfamily%3A%20serif%3B%20%7D%0Abody%20%7B%0Afont%2Dsize%3A%201%2E8rem%3B%0Aline%2Dheight%3A%201%2E618%3B%0Amax%2Dwidth%3A%2038em%3B%0Amargin%3A%20auto%3B%0Acolor%3A%20%234a4a4a%3B%0Abackground%2Dcolor%3A%20%23f9f9f9%3B%0Apadding%3A%2013px%3B%20%7D%0A%40media%20%28max%2Dwidth%3A%20684px%29%20%7B%0Abody%20%7B%0Afont%2Dsize%3A%201%2E53rem%3B%20%7D%20%7D%0A%40media%20%28max%2Dwidth%3A%20382px%29%20%7B%0Abody%20%7B%0Afont%2Dsize%3A%201%2E35rem%3B%20%7D%20%7D%0Ah1%2C%20h2%2C%20h3%2C%20h4%2C%20h5%2C%20h6%20%7B%0Aline%2Dheight%3A%201%2E1%3B%0Afont%2Dfamily%3A%20Verdana%2C%20Geneva%2C%20sans%2Dserif%3B%0Afont%2Dweight%3A%20700%3B%0Aoverflow%2Dwrap%3A%20break%2Dword%3B%0Aword%2Dwrap%3A%20break%2Dword%3B%0A%2Dms%2Dword%2Dbreak%3A%20break%2Dall%3B%0Aword%2Dbreak%3A%20break%2Dword%3B%0A%2Dms%2Dhyphens%3A%20auto%3B%0A%2Dmoz%2Dhyphens%3A%20auto%3B%0A%2Dwebkit%2Dhyphens%3A%20auto%3B%0Ahyphens%3A%20auto%3B%20%7D%0Ah1%20%7B%0Afont%2Dsize%3A%202%2E35em%3B%20%7D%0Ah2%20%7B%0Afont%2Dsize%3A%202em%3B%20%7D%0Ah3%20%7B%0Afont%2Dsize%3A%201%2E75em%3B%20%7D%0Ah4%20%7B%0Afont%2Dsize%3A%201%2E5em%3B%20%7D%0Ah5%20%7B%0Afont%2Dsize%3A%201%2E25em%3B%20%7D%0Ah6%20%7B%0Afont%2Dsize%3A%201em%3B%20%7D%0Asmall%2C%20sub%2C%20sup%20%7B%0Afont%2Dsize%3A%2075%25%3B%20%7D%0Ahr%20%7B%0Aborder%2Dcolor%3A%20%232c8898%3B%20%7D%0Aa%20%7B%0Atext%2Ddecoration%3A%20none%3B%0Acolor%3A%20%232c8898%3B%20%7D%0Aa%3Ahover%20%7B%0Acolor%3A%20%23982c61%3B%0Aborder%2Dbottom%3A%202px%20solid%20%234a4a4a%3B%20%7D%0Aul%20%7B%0Apadding%2Dleft%3A%201%2E4em%3B%20%7D%0Ali%20%7B%0Amargin%2Dbottom%3A%200%2E4em%3B%20%7D%0Ablockquote%20%7B%0Afont%2Dstyle%3A%20italic%3B%0Amargin%2Dleft%3A%201%2E5em%3B%0Apadding%2Dleft%3A%201em%3B%0Aborder%2Dleft%3A%203px%20solid%20%232c8898%3B%20%7D%0Aimg%20%7B%0Amax%2Dwidth%3A%20100%25%3B%20%7D%0A%0Apre%20%7B%0Abackground%2Dcolor%3A%20%23f1f1f1%3B%0Adisplay%3A%20block%3B%0Apadding%3A%201em%3B%0Aoverflow%2Dx%3A%20auto%3B%20%7D%0Acode%20%7B%0Afont%2Dsize%3A%200%2E9em%3B%0Apadding%3A%200%200%2E5em%3B%0Abackground%2Dcolor%3A%20%23f1f1f1%3B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%20%7D%0Apre%20%3E%20code%20%7B%0Apadding%3A%200%3B%0Abackground%2Dcolor%3A%20transparent%3B%0Awhite%2Dspace%3A%20pre%3B%20%7D%0A%0Atable%20%7B%0Atext%2Dalign%3A%20justify%3B%0Awidth%3A%20100%25%3B%0Aborder%2Dcollapse%3A%20collapse%3B%20%7D%0Atd%2C%20th%20%7B%0Apadding%3A%200%2E5em%3B%0Aborder%2Dbottom%3A%201px%20solid%20%23f1f1f1%3B%20%7D%0A%0Ainput%2C%20textarea%20%7B%0Aborder%3A%201px%20solid%20%234a4a4a%3B%20%7D%0Ainput%3Afocus%2C%20textarea%3Afocus%20%7B%0Aborder%3A%201px%20solid%20%232c8898%3B%20%7D%0Atextarea%20%7B%0Awidth%3A%20100%25%3B%20%7D%0A%2Ebutton%2C%20button%2C%20input%5Btype%3D%22submit%22%5D%2C%20input%5Btype%3D%22reset%22%5D%2C%20input%5Btype%3D%22button%22%5D%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Apadding%3A%205px%2010px%3B%0Atext%2Dalign%3A%20center%3B%0Atext%2Ddecoration%3A%20none%3B%0Awhite%2Dspace%3A%20nowrap%3B%0Abackground%2Dcolor%3A%20%232c8898%3B%0Acolor%3A%20%23f9f9f9%3B%0Aborder%2Dradius%3A%201px%3B%0Aborder%3A%201px%20solid%20%232c8898%3B%0Acursor%3A%20pointer%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%20%7D%0A%2Ebutton%5Bdisabled%5D%2C%20button%5Bdisabled%5D%2C%20input%5Btype%3D%22submit%22%5D%5Bdisabled%5D%2C%20input%5Btype%3D%22reset%22%5D%5Bdisabled%5D%2C%20input%5Btype%3D%22button%22%5D%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0Aopacity%3A%20%2E5%3B%20%7D%0A%2Ebutton%3Afocus%2C%20%2Ebutton%3Ahover%2C%20button%3Afocus%2C%20button%3Ahover%2C%20input%5Btype%3D%22submit%22%5D%3Afocus%2C%20input%5Btype%3D%22submit%22%5D%3Ahover%2C%20input%5Btype%3D%22reset%22%5D%3Afocus%2C%20input%5Btype%3D%22reset%22%5D%3Ahover%2C%20input%5Btype%3D%22button%22%5D%3Afocus%2C%20input%5Btype%3D%22button%22%5D%3Ahover%20%7B%0Abackground%2Dcolor%3A%20%23982c61%3B%0Aborder%2Dcolor%3A%20%23982c61%3B%0Acolor%3A%20%23f9f9f9%3B%0Aoutline%3A%200%3B%20%7D%0Atextarea%2C%20select%2C%20input%5Btype%5D%20%7B%0Acolor%3A%20%234a4a4a%3B%0Apadding%3A%206px%2010px%3B%0A%0Amargin%2Dbottom%3A%2010px%3B%0Abackground%2Dcolor%3A%20%23f1f1f1%3B%0Aborder%3A%201px%20solid%20%23f1f1f1%3B%0Aborder%2Dradius%3A%204px%3B%0Abox%2Dshadow%3A%20none%3B%0Abox%2Dsizing%3A%20border%2Dbox%3B%20%7D%0Atextarea%3Afocus%2C%20select%3Afocus%2C%20input%5Btype%5D%3Afocus%20%7B%0Aborder%3A%201px%20solid%20%232c8898%3B%0Aoutline%3A%200%3B%20%7D%0Alabel%2C%20legend%2C%20fieldset%20%7B%0Adisplay%3A%20block%3B%0Amargin%2Dbottom%3A%20%2E5rem%3B%0Afont%2Dweight%3A%20600%3B%20%7D%0A" rel="stylesheet" />
-  <link href="data:text/css,%0Apre%20%7B%0Aborder%3A%20solid%20%23aaa%201px%3B%0Apadding%3A%208px%3B%0A%7D%0Apre%2EnumberSource%20%7B%0Amargin%3A%200%3B%0Apadding%2Dleft%3A%200%3B%0A%7D%0Adiv%2EsourceCode%20%7B%0Aoverflow%3A%20visible%3B%0A%7D%0Apre%2C%20pre%2EsourceCode%20%7B%0Aoverflow%2Dx%3A%20auto%3B%0A%7D%0Apre%3Ecode%20%7B%0Awhite%2Dspace%3A%20pre%3B%0Aoverflow%3A%20visible%3B%0Abackground%2Dcolor%3A%20unset%3B%0Apadding%3A%200%3B%0A%7D%0Apre%2EsourceCode%2EnumberSource%20%7B%0Aoverflow%2Dx%3A%20visible%3B%0A%7D%0Apre%2EsourceCode%2EnumberSource%3Ecode%20%7B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%0A%7D%0Apre%2EsourceCode%2EnumberSource%3Ecode%3Espan%20%7B%0Aleft%3A%208px%3B%0Atext%2Dindent%3A%20%2D4%2E6em%3B%0A%7D%0A%0A%2Echunk%2Dsummary%20%7B%0Atext%2Dalign%3A%20right%3B%0A%7D%0A%2Echunk%2Dsummary%2Bpre%2C%0A%2Echunk%2Dsummary%2Bdiv%2EsourceCode%20%7B%0Amargin%2Dtop%3A%202px%3B%0A%7D%0A%0Anav%20%3E%20ul%20%7B%0Aborder%3A%20%2E0625rem%20solid%20%23444%3B%0Aborder%2Dradius%3A%204px%3B%0Amargin%3A%205px%3B%0Apadding%3A%205px%3B%0A%7D%0Anav%20ul%20%7B%0Alist%2Dstyle%2Dtype%3A%20none%3B%0Apadding%2Dinline%2Dstart%3A%201rem%3B%0A%7D%0Anav%20ul%20li%20%7B%0Apadding%3A%200%3B%0A%7D%0Anav%20ul%20ul%20%7B%0Amargin%2Dtop%3A%200%3B%0Amargin%2Dbottom%3A%200%3B%0Apadding%2Dtop%3A%200%3B%0Apadding%2Dbottom%3A%200%3B%0A%7D%0Anav%20code%20%7B%0Abackground%2Dcolor%3A%20unset%3B%0Acolor%3A%20unset%3B%0A%7D%0Aa%2Ebutton%3Ahover%7B%0Aborder%2Dwidth%3A%201px%3B%0A%7D%0A" rel="stylesheet" />
-  <link href="data:text/css,%40media%20screen%20and%20%28max%2Dwidth%3A%20960px%29%20%7B%0Aheader%2C%20nav%2C%20article%20%7B%0Apadding%3A%200%203rem%3B%0A%7D%0A%7D%0A%23TOC%20%7B%0Afont%2Dsize%3A%200%2E9em%3B%0Aborder%3A%20none%3B%0A%7D%0A%23TOC%20%3E%20ul%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%0A%7D%0A%23TOC%20ul%20%7B%0Amargin%3A%200%3B%0A%7D%0A%23TOC%20li%2C%20%23TOC%20a%20%7B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0A%7D%0A" rel="stylesheet" />
-  <link href="data:text/css,%2Etooltip%20%7B%0Aposition%3A%20relative%3B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0A%2Etooltip%3Abefore%2C%20%2Etooltip%3Aafter%20%7B%0Aposition%3A%20absolute%3B%0Aopacity%3A%200%3B%0Aclip%3A%20rect%280%200%200%200%29%3B%0A%2Dwebkit%2Dclip%2Dpath%3A%20inset%28100%25%29%3B%0Aclip%2Dpath%3A%20inset%28100%25%29%3B%0Atransition%3A%20all%200%2E3s%3B%0Az%2Dindex%3A%201010%3B%0Aleft%3A%2050%25%3B%0A%7D%0A%2Etooltip%3Anot%28%2Ebottom%29%3Abefore%2C%20%2Etooltip%3Anot%28%2Ebottom%29%3Aafter%20%7B%0Abottom%3A%2075%25%3B%0A%7D%0A%2Etooltip%2Ebottom%3Abefore%2C%20%2Etooltip%2Ebottom%3Aafter%20%7B%0Atop%3A%2075%25%3B%0A%7D%0A%2Etooltip%3Ahover%3Abefore%2C%20%2Etooltip%3Ahover%3Aafter%2C%20%2Etooltip%3Afocus%3Abefore%2C%20%2Etooltip%3Afocus%3Aafter%20%7B%0Aopacity%3A%201%3B%0Aclip%3A%20auto%3B%0A%2Dwebkit%2Dclip%2Dpath%3A%20inset%280%25%29%3B%0Aclip%2Dpath%3A%20inset%280%25%29%3B%0A%7D%0A%2Etooltip%3Abefore%20%7B%0Acontent%3A%20%27%27%3B%0Abackground%3A%20transparent%3B%0Aborder%3A%200%2E5rem%20solid%20transparent%3B%0Aleft%3A%20calc%2850%25%20%2D%200%2E5rem%29%3B%0A%7D%0A%2Etooltip%3Anot%28%2Ebottom%29%3Abefore%20%7B%0Aborder%2Dtop%2Dcolor%3A%20%23212121%3B%0A%7D%0A%2Etooltip%2Ebottom%3Abefore%20%7B%0Aborder%2Dbottom%2Dcolor%3A%20%23212121%3B%0A%7D%0A%2Etooltip%3Aafter%20%7B%0Acontent%3A%20attr%28aria%2Dlabel%29%3B%0Acolor%3A%20%23fafafa%3B%0Abackground%3A%20%23212121%3B%0Aborder%2Dradius%3A%200%2E125rem%3B%0Apadding%3A%200%2E5rem%3B%0Awhite%2Dspace%3A%20nowrap%3B%0Atransform%3A%20translateX%28%2D50%25%29%3B%0A%7D%0A%2Etooltip%3Anot%28%2Ebottom%29%3Aafter%20%7B%0Amargin%2Dbottom%3A%201rem%3B%0A%7D%0A%2Etooltip%2Ebottom%3Aafter%20%7B%0Amargin%2Dtop%3A%201rem%3B%0A%7D%0A" rel="stylesheet" />
-  <link href="data:text/css,%3Aroot%20%7B%0A%2D%2Dtoc%2Dwidth%3A%20300px%3B%0A%7D%0A%40media%20screen%20and%20%28min%2Dwidth%3A%20960px%29%20%7B%0Abody%20%7B%0Amax%2Dwidth%3A%20100vw%3B%0Amargin%3A%200%3B%0Apadding%3A%200%3B%0A%7D%0Amain%20%7B%0Adisplay%3A%20grid%3B%0Agrid%2Dtemplate%2Dcolumns%3A%20var%28%2D%2Dtoc%2Dwidth%29%201fr%3B%0Agrid%2Dtemplate%2Drows%3A%20auto%20auto%3B%0A%7D%0A%23TOC%20%7B%0Agrid%2Drow%3A%201%20%2F%20%2D1%3B%0Agrid%2Dcolumn%3A%201%20%2F%202%3B%0Aborder%3A%20none%3B%0Amargin%3A%200%3B%0Awidth%3A%20var%28%2D%2Dtoc%2Dwidth%29%3B%0A%7D%0A%23TOC%20%3E%20ul%20%7B%0Apadding%2Dtop%3A%200%3B%0Apadding%2Dbottom%3A%200%3B%0Aposition%3A%20sticky%3B%0Amax%2Dheight%3A%20100vh%3B%0Aoverflow%2Dy%3A%20auto%3B%0Atop%3A%200%3B%0Aborder%3A%20none%3B%0A%7D%0A%23TOC%20%3E%20ul%20%3E%20li%3Afirst%2Dchild%20%7B%0Apadding%2Dtop%3A%200%2E5rem%3B%0A%7D%0A%7D%0A%40media%20screen%20and%20%28min%2Dwidth%3A%20960px%29%20and%20%28max%2Dwidth%3A%201260px%29%20%7B%0Amain%20%7B%0Awidth%3A%20calc%28100vw%20%2D%202rem%29%3B%0A%7D%0Aheader%2C%20article%20%7B%0Awidth%3A%20calc%28100vw%20%2D%20var%28%2D%2Dtoc%2Dwidth%29%20%2D%206rem%29%3B%0Apadding%3A%200%200%200%204rem%3B%0A%7D%0A%7D%0A%40media%20screen%20and%20%28min%2Dwidth%3A%201260px%29%20%7B%0Amain%20%7B%0Awidth%3A%20calc%281260px%20%2D%202rem%29%3B%0Amargin%3A%200%20calc%2850vw%20%2D%20480px%29%200%20auto%3B%0A%7D%0Aheader%2C%20article%20%7B%0Awidth%3A%20calc%28960px%20%2D%206rem%29%3B%0Apadding%3A%200%200%200%204rem%3B%0A%7D%0A%7D%0A" rel="stylesheet" />
-  <link href="data:text/css,%2Etabset%3E%2Etab%20%7B%0Adisplay%3A%20none%3B%0Aborder%3A%20solid%201px%20black%3B%0Apadding%3A%205px%3B%20%7D%0A%2Etabset%3E%2Etab%2Eactive%20%7B%0Adisplay%3A%20block%3B%20%7D%0A%2Etabset%3E%2Etab%3E%3Afirst%2Dchild%20%7B%0Adisplay%3A%20none%3B%20%7D%0A%2Etabset%3E%2Etabmenu%20%7B%0Amargin%2Dbottom%3A%200%3B%0Apadding%3A%200%3B%20%7D%0A%2Etabset%3E%2Etabmenu%20li%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0Amargin%3A%200%202px%200%200%3B%20%7D%0A%2Etabset%3E%2Etabmenu%20button%20%7B%0Atext%2Ddecoration%3A%20none%3B%0Afont%2Dweight%3A%20normal%3B%20%7D%0A%2Etabset%3E%2Etabmenu%20%2Eactive%20button%20%7B%0Atext%2Ddecoration%3A%20solid%20underline%3B%0Afont%2Dweight%3A%20bold%3B%20%7D%0A%2Etabset%3E%2Etabmenu%20%2Eactive%20button%3Abefore%20%7B%0Acontent%3A%20%22%3E%20%22%3B%20%7D%0A" rel="stylesheet" />
-  <script src="data:application/javascript;base64,ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKCkgewogIGxldCB0YWJIYXNoZXMgPSBbXTsKCiAgZnVuY3Rpb24gdG9nZ2xlKGVsZW0sIGZyb20gPSAwLCB0byA9IDApIHsKICAgIGVsZW1bZnJvbV0uY2xhc3NMaXN0LnJlbW92ZSgiYWN0aXZlIik7CiAgICBlbGVtW3RvXS5jbGFzc0xpc3QuYWRkKCJhY3RpdmUiKTsKICAgIHJldHVybiB0bzsKICB9CgogIGZ1bmN0aW9uIGluaXRpYWxpemUodGFicykgewogICAgY29uc3QgYWN0aXZlID0gQXJyYXkuZnJvbSh0YWJzKS5maW5kSW5kZXgoZnVuY3Rpb24oeCkgewogICAgICBjb25zdCBpc0FjdGl2ZSA9IHguY2xhc3NMaXN0LmNvbnRhaW5zKCJhY3RpdmUiKTsKICAgICAgeC5jbGFzc0xpc3QucmVtb3ZlKCJhY3RpdmUiKTsKICAgICAgcmV0dXJuIGlzQWN0aXZlOwogICAgfSk7CiAgICByZXR1cm4gdG9nZ2xlKHRhYnMsIDAsIGFjdGl2ZSAqIChhY3RpdmUgPiAwKSk7CiAgfQoKICAvLyBJbXBsZW1lbnQKICBBcnJheS5mcm9tKGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoInNlY3Rpb24udGFic2V0IikpLmZvckVhY2goc2VjdGlvbiA9PiB7CiAgICBjb25zdCB0YWJzID0gc2VjdGlvbi5xdWVyeVNlbGVjdG9yQWxsKCI6c2NvcGU+c2VjdGlvbiIpOwogICAgY29uc3QgdGFiSWRzID0gQXJyYXkuZnJvbSh0YWJzKS5tYXAodGFiID0+IHsKICAgICAgdGFiLmNsYXNzTGlzdC5hZGQoInRhYiIpOwogICAgICByZXR1cm4gdGFiLmlkOwogICAgfSk7CiAgICB0YWJIYXNoZXMucHVzaCguLi50YWJJZHMubWFwKGlkID0+ICIjIiArIGlkKSk7CiAgICBsZXQgYWN0aXZlID0gaW5pdGlhbGl6ZSh0YWJzKTsKCiAgICBjb25zdCB1bCA9IHNlY3Rpb24uaW5zZXJ0QmVmb3JlKGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInVsIiksIHRhYnNbMF0pOwogICAgdWwuY2xhc3NMaXN0LmFkZCgidGFibWVudSIpOwogICAgdGFiSWRzLmZvckVhY2godGFiSWQgPT4gewogICAgICBjb25zdCBjdXJyZW50ID0gdGFiSWRzLmluZGV4T2YodGFiSWQpOwogICAgICB0YWJzW2N1cnJlbnRdLnJlbW92ZUF0dHJpYnV0ZSgiaWQiKTsKICAgICAgY29uc3QgYnV0dG9uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiYnV0dG9uIik7CiAgICAgIHVsLmFwcGVuZENoaWxkKGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImxpIikpLmFwcGVuZENoaWxkKGJ1dHRvbik7CiAgICAgIGJ1dHRvbi5pZCA9IHRhYklkOwogICAgICBidXR0b24udGV4dENvbnRlbnQgPSB0YWJzW2N1cnJlbnRdLmNoaWxkcmVuWzBdLnRleHRDb250ZW50OwogICAgICBidXR0b24uYWRkRXZlbnRMaXN0ZW5lcigiY2xpY2siLCBmdW5jdGlvbigpIHsKICAgICAgICBoaXN0b3J5LnB1c2hTdGF0ZShudWxsLCBudWxsLCAiIyIgKyB0YWJJZCk7CiAgICAgICAgdG9nZ2xlKHRhYnMsIGFjdGl2ZSwgY3VycmVudCk7CiAgICAgICAgYWN0aXZlID0gdG9nZ2xlKHVsLmNoaWxkcmVuLCBhY3RpdmUsIGN1cnJlbnQpOwogICAgICB9KTsKICAgIH0pOwogICAgdG9nZ2xlKHVsLmNoaWxkcmVuLCAwLCBhY3RpdmUpOwogIH0pOwoKICAvLyBOYXZpZ2F0aW9uCiAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoImhhc2hjaGFuZ2UiLCBmdW5jdGlvbigpIHsKICAgIGlmICh0YWJIYXNoZXMuaW5kZXhPZihsb2NhdGlvbi5oYXNoKSA+PSAwKSB7CiAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IobG9jYXRpb24uaGFzaCkuY2xpY2soKTsKICAgIH0KICB9KTsKfSk7Cg=="></script>
-  <script src="data:application/javascript;base64,ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIGZ1bmN0aW9uKCkgewogIGZ1bmN0aW9uIGdldEJHQ29sb3IoZWwpIHsKICAgIGNvbnN0IGIgPSB3aW5kb3cuZ2V0Q29tcHV0ZWRTdHlsZShlbCkuYmFja2dyb3VuZENvbG9yOwogICAgcmV0dXJuIChiICE9PSAidHJhbnNwYXJlbnQiICYmCiAgICAgICAgICAgIGIgIT09ICJyZ2JhKDAsIDAsIDAsIDApIiAmJgogICAgICAgICAgICBiICE9PSAicmdiYSgyNTUsMjU1LDI1NSwwKSIpID8gYgogICAgICAgICA6IChlbC5wYXJlbnROb2RlID09PSBudWxsKSAgICAgID8gIndoaXRlIgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDogZ2V0QkdDb2xvcihlbC5wYXJlbnROb2RlKTsKICB9CgogIGZ1bmN0aW9uIGFyZ01pbih4KSB7CiAgICByZXR1cm4geC5pbmRleE9mKE1hdGgubWluKC4uLngpKTsKICB9CgogIGNvbnN0IGFuY2hvcnMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcjVE9DIGxpPmEnKTsKICBjb25zdCBoZWFkZXJJRHMgPSBBcnJheS5mcm9tKGFuY2hvcnMpLm1hcCh4ID0+IHguYXR0cmlidXRlcy5ocmVmLnZhbHVlLnN1YnN0cmluZygxKSk7CiAgbGV0IGhpZ2hsaWdodGVkID0gMDsKCiAgd2luZG93LmRvY3VtZW50LnN0eWxlU2hlZXRzWzBdLmluc2VydFJ1bGUoCiAgICBgI1RPQyBhLmhpZ2hsaWdodHtkaXNwbGF5OmlubGluZS1ibG9jazt3aWR0aDoxMDAlO2NvbG9yOiR7Z2V0QkdDb2xvcihhbmNob3JzWzBdKX07YmFja2dyb3VuZC1jb2xvcjoke3dpbmRvdy5nZXRDb21wdXRlZFN0eWxlKGFuY2hvcnNbMF0pLmNvbG9yfWAKICApOwoKICBmdW5jdGlvbiBoaWdobGlnaHQoKSB7CiAgICBjb25zdCBjbG9zZXN0ID0gYXJnTWluKGhlYWRlcklEcy5tYXAoCiAgICAgIHggPT4gTWF0aC5wb3coZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoeCkuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCkudG9wLCAyKQogICAgKSk7CiAgICBpZiAoaGlnaGxpZ2h0ZWQgIT09IGNsb3Nlc3QpIHsKICAgICAgYW5jaG9yc1toaWdobGlnaHRlZF0uY2xhc3NMaXN0LnJlbW92ZSgiaGlnaGxpZ2h0Iik7CiAgICB9CiAgICBhbmNob3JzW2Nsb3Nlc3RdLmNsYXNzTGlzdC5hZGQoImhpZ2hsaWdodCIpOwogICAgaGlnaGxpZ2h0ZWQgPSBjbG9zZXN0OwogIH0KCiAgaGlnaGxpZ2h0KCk7CiAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignc2Nyb2xsJywgaGlnaGxpZ2h0LCB7cGFzc2l2ZTogdHJ1ZX0pOwp9KTsK"></script>
+  <style type="text/css">html{font-size:62.5%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif}body{font-size:1.8rem;line-height:1.618;max-width:38em;margin:auto;color:#4a4a4a;background-color:#f9f9f9;padding:13px}@media (max-width: 684px){body{font-size:1.53rem}}@media (max-width: 382px){body{font-size:1.35rem}}h1,h2,h3,h4,h5,h6{line-height:1.1;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;font-weight:700;margin-top:3rem;margin-bottom:1.5rem;overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}h1{font-size:2.35em}h2{font-size:2.00em}h3{font-size:1.75em}h4{font-size:1.5em}h5{font-size:1.25em}h6{font-size:1em}p{margin-top:0px;margin-bottom:2.5rem}small,sub,sup{font-size:75%}hr{border-color:#2c8898}a{text-decoration:none;color:#2c8898}a:hover{color:#982c61;border-bottom:2px solid #4a4a4a}ul{padding-left:1.4em;margin-top:0px;margin-bottom:2.5rem}li{margin-bottom:0.4em}blockquote{font-style:italic;margin-left:1.5em;padding-left:1em;border-left:3px solid #2c8898}img{height:auto;max-width:100%;margin-top:0px;margin-bottom:2.5rem}pre{background-color:#f1f1f1;display:block;padding:1em;overflow-x:auto;margin-top:0px;margin-bottom:2.5rem}code{font-size:0.9em;padding:0 0.5em;background-color:#f1f1f1;white-space:pre-wrap}pre>code{padding:0;background-color:transparent;white-space:pre}table{text-align:justify;width:100%;border-collapse:collapse}td,th{padding:0.5em;border-bottom:1px solid #f1f1f1}input,textarea{border:1px solid #4a4a4a}input:focus,textarea:focus{border:1px solid #2c8898}textarea{width:100%}.button,button,input[type="submit"],input[type="reset"],input[type="button"]{display:inline-block;padding:5px 10px;text-align:center;text-decoration:none;white-space:nowrap;background-color:#2c8898;color:#f9f9f9;border-radius:1px;border:1px solid #2c8898;cursor:pointer;box-sizing:border-box}.button[disabled],button[disabled],input[type="submit"][disabled],input[type="reset"][disabled],input[type="button"][disabled]{cursor:default;opacity:.5}.button:focus,.button:hover,button:focus,button:hover,input[type="submit"]:focus,input[type="submit"]:hover,input[type="reset"]:focus,input[type="reset"]:hover,input[type="button"]:focus,input[type="button"]:hover{background-color:#982c61;border-color:#982c61;color:#f9f9f9;outline:0}textarea,select,input[type]{color:#4a4a4a;padding:6px 10px;margin-bottom:10px;background-color:#f1f1f1;border:1px solid #f1f1f1;border-radius:4px;box-shadow:none;box-sizing:border-box}textarea:focus,select:focus,input[type]:focus{border:1px solid #2c8898;outline:0}input[type="checkbox"]:focus{outline:1px dotted #2c8898}label,legend,fieldset{display:block;margin-bottom:.5rem;font-weight:600}div.sourceCode{overflow:visible}pre{border:solid #aaa 1px;padding:8px}pre>code{white-space:pre;overflow:visible;background-color:unset;padding:0}pre.numberSource{margin:0;padding-left:0}pre,pre.sourceCode{overflow-x:auto}pre.sourceCode.numberSource{overflow-x:visible}pre.sourceCode.numberSource>code{white-space:pre-wrap}pre.sourceCode.numberSource>code>span{left:8px;text-indent:-4.6em}.chunk-summary{text-align:right}.chunk-summary+pre,.chunk-summary+div.sourceCode{margin-top:2px}nav[role="doc-toc"]>ul{border:.0625rem solid #444;border-radius:4px;margin:5px;padding:5px}nav[role="doc-toc"] ul{list-style-type:none;padding-inline-start:1rem}nav[role="doc-toc"] ul li{padding:0}nav[role="doc-toc"] ul ul{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0}nav[role="doc-toc"] code{background-color:unset;color:unset}a.button:hover{border-width:1px}@media screen and (max-width: 960px){header,nav,article{padding:0 3rem}}nav[role="doc-toc"]{font-size:0.9em;border:none}nav[role="doc-toc"]>ul{box-sizing:border-box}nav[role="doc-toc"] ul{margin:0}nav[role="doc-toc"] li,nav[role="doc-toc"] a{margin:0;padding:0}.tooltip{position:relative;display:inline-block}.tooltip:before,.tooltip:after{position:absolute;opacity:0;clip:rect(0 0 0 0);-webkit-clip-path:inset(100%);clip-path:inset(100%);transition:all 0.3s;z-index:1010;left:50%}.tooltip:not(.bottom):before,.tooltip:not(.bottom):after{bottom:75%}.tooltip.bottom:before,.tooltip.bottom:after{top:75%}.tooltip:hover:before,.tooltip:hover:after,.tooltip:focus:before,.tooltip:focus:after{opacity:1;clip:auto;-webkit-clip-path:inset(0%);clip-path:inset(0%)}.tooltip:before{content:'';background:transparent;border:0.5rem solid transparent;left:calc(50% - 0.5rem)}.tooltip:not(.bottom):before{border-top-color:#212121}.tooltip.bottom:before{border-bottom-color:#212121}.tooltip:after{content:attr(aria-label);color:#fafafa;background:#212121;border-radius:0.125rem;padding:0.5rem;white-space:nowrap;transform:translateX(-50%)}.tooltip:not(.bottom):after{margin-bottom:1rem}.tooltip.bottom:after{margin-top:1rem}:root{--toc-width: 300px}@media screen and (min-width: 960px){body{max-width:100vw;margin:0;padding:0}main{display:grid;grid-template-columns:var(--toc-width) 1fr;grid-template-rows:auto auto}nav[role="doc-toc"]{grid-row:1 / -1;grid-column:1 / 2;border:none;margin:0;width:var(--toc-width)}nav[role="doc-toc"]>ul{padding-top:0;padding-bottom:0;position:sticky;max-height:100vh;overflow-y:auto;top:0;border:none}nav[role="doc-toc"]>ul>li:first-child{padding-top:0.5rem}}@media screen and (min-width: 960px) and (max-width: 1260px){main{width:calc(100vw - 2rem)}header,article{width:calc(100vw - var(--toc-width) - 6rem);padding:0 0 0 4rem}}@media screen and (min-width: 1260px){main{width:calc(1260px - 2rem);margin:0 calc(50vw - 480px) 0 auto}header,article{width:calc(960px - 6rem);padding:0 0 0 4rem}}.tabset>.tab{display:none;border:solid 1px black;padding:5px}.tabset>.tab.active{display:block}.tabset>.tab>:first-child{display:none}.tabset>.tabmenu{margin-bottom:0;padding:0}.tabset>.tabmenu li{display:inline-block;margin:0 2px 0 0}.tabset>.tabmenu button{text-decoration:none;font-weight:normal}.tabset>.tabmenu .active button{text-decoration:solid underline;font-weight:bold}.tabset>.tabmenu .active button:before{content:"> "}
+</style>
+  <script>window.addEventListener('load', function() {
+  let tabIds = [];
+
+  function toggle(elem, from = 0, to = 0) {
+    elem[from].classList.remove("active");
+    elem[to].classList.add("active");
+    return to;
+  }
+
+  function initialize(tabs) {
+    const active = tabs.findIndex(x => x.classList.contains("active"));
+    tabs.forEach(function(x) {
+      tabIds.push(x.id);
+      x.dataset.id = x.id;
+      x.removeAttribute("id");
+      x.classList.add("tab");
+      x.classList.remove("active");
+    });
+    return toggle(tabs, 0, active * (active > 0));
+  }
+
+  // Implement
+  Array.from(document.querySelectorAll("section.tabset")).forEach(section => {
+    const tabs = Array.from(section.querySelectorAll(":scope>section"));
+    let active = initialize(tabs);
+
+    const ul = section.insertBefore(document.createElement("ul"), tabs[0]);
+    ul.classList.add("tabmenu");
+    tabs.forEach((tab, current) => {
+      const button = document.createElement("button");
+      ul.appendChild(document.createElement("li")).appendChild(button);
+      button.id = tab.dataset.id;
+      button.innerHTML = tab.children[0].innerHTML;
+      button.addEventListener("click", function() {
+        history.pushState(null, null, "#" + button.id);
+        toggle(tabs, active, current);
+        active = toggle(ul.children, active, current);
+      });
+    });
+    toggle(ul.children, 0, active);
+  });
+
+  // Navigation
+  function showHashTab() {
+    const buttonId = tabIds.find(x => ('#' + x) === location.hash);
+    if (!buttonId) return;
+    const button = document.getElementById(buttonId);
+    let el = button.parentElement.parentElement.parentElement;
+    while (el) {
+      if (
+        el.tagName === "SECTION"
+        && el.classList.contains("tab")
+        && !el.classList.contains("active")
+      ) {
+        document.getElementById(el.dataset.id).click();
+      }
+      el = el.parentElement;
+    }
+    button.click();
+    button.scrollIntoView();
+  }
+  showHashTab();
+  window.addEventListener("hashchange", showHashTab); 
+});
+</script>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+  function getBGColor(el) {
+    const b = window.getComputedStyle(el).backgroundColor;
+    return (b !== "transparent" &&
+            b !== "rgba(0, 0, 0, 0)" &&
+            b !== "rgba(255,255,255,0)") ? b
+         : (el.parentNode === null)      ? "white"
+                                         : getBGColor(el.parentNode);
+  }
+
+  function argMin(x) {
+    return x.indexOf(Math.min(...x));
+  }
+
+  const anchors = document.querySelectorAll('nav[role="doc-toc"] li>a');
+  const headerIDs = Array.from(anchors).map(x => x.attributes.href.value.substring(1));
+  let highlighted = 0;
+
+  window.document.styleSheets[0].insertRule(
+    `nav[role="doc-toc"] a.highlight{display:inline-block;width:100%;color:${getBGColor(anchors[0])};background-color:${window.getComputedStyle(anchors[0]).color}`
+  );
+
+  function highlight() {
+    const closest = argMin(headerIDs.map(
+      x => Math.pow(document.getElementById(x).getBoundingClientRect().top, 2)
+    ));
+    if (highlighted !== closest) {
+      anchors[highlighted].classList.remove("highlight");
+    }
+    anchors[closest].classList.add("highlight");
+    highlighted = closest;
+  }
+
+  highlight();
+  document.addEventListener('scroll', highlight, {passive: true});
+});
+</script>
+  <script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous" data-external="1">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous" data-external="1"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);" data-external="1"></script>
@@ -105,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </head>
 <body>
 <aside style="text-align:right">
-  <a href="data:text/x-markdown;base64,LS0tCnRpdGxlOiAiV3JpdGluZyBWaWduZXR0ZXMgd2l0aCB0aGUgJ21pbmlkb3duJyBQYWNrYWdlIgpvdXRwdXQ6CiAgbWluaWRvd246Om1pbmlfZG9jdW1lbnQ6CiAgICBmcmFtZXdvcms6IHNha3VyYQogICAgdG9jOiB0cnVlCiAgICB0b2NfZmxvYXQ6IHRydWUKICAgIHRvY19oaWdobGlnaHQ6IHRydWUKICAgIGNvZGVfZm9sZGluZzogImhpZGUiCiAgICByZXN1bHRzX2ZvbGRpbmc6ICJzaG93IgogICAgdGFic2V0OiB0cnVlCiAgICBjb2RlX2Rvd25sb2FkOiB0cnVlCiAgICBtYXRoOiAia2F0ZXgiCnZpZ25ldHRlOiA+CiAgJVxWaWduZXR0ZUluZGV4RW50cnl7V3JpdGluZyBWaWduZXR0ZXMgd2l0aCB0aGUgJ21pbmlkb3duJyBQYWNrYWdlfQogICVcVmlnbmV0dGVFbmdpbmV7a25pdHI6OnJtYXJrZG93bn0KICAlXFZpZ25ldHRlRW5jb2Rpbmd7VVRGLTh9CnBhcmFtczoKICBldmFsX3JlbmRlcjogdHJ1ZQotLS0KCmBgYHtyLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBjb2xsYXBzZSA9IFRSVUUsCiAgY29tbWVudCA9ICIjPiIKKQpgYGAKClRoZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIGZ1bmN0aW9uIHByb3ZpZGVzIHNpbXBsZSBhbmQgbGlnaHR3ZWlnaHQgeWV0IHBvd2VyZnVsIEhUTUwgZm9ybWF0LgpFdmVuIGlmIGFsbCBmZWF0dXJlcyBhcmUgZW5hYmxlZCwgdGhlIHNpemUgb2YgZG9jdW1lbnQgaXMgY29tcGFyYWJsZSB3aXRoIHRoZSBkZWZhdWx0IGBodG1sX3ZpZ25ldHRlYCBmdW5jdGlvbi4KCiMgSG93IGVhc3kgaXQgaXMhCgpPbmx5IHRoZSBkaWZmZXJlbmNlIGlzIHRoZSBZQU1MIGZyb250bWF0dGVyLgoKIyMgMyBzdGVwcyB0byBnbwoKMS4gQ3JlYXRlIGFuIGBSbWRgIGZpbGUgdW5kZXIgdGhlIGB2aWduZXR0ZXNgIGRpcmVjdG9yeQoyLiBBZGQgYSBZQU1MIGZyb250IG1hdHRlciBzb21ldGhpbmcgbGlrZSBiZWxvdwoKICAgIGBgYHlhbWwKICAgIC0tLQogICAgdGl0bGU6ICJXcml0aW5nIFZpZ25ldHRlIHdpdGggdGhlICdtaW5pZG93bicgUGFja2FnZSIKICAgIG91dHB1dDogbWluaWRvd246Om1pbmlfZG9jdW1lbnQKICAgIHZpZ25ldHRlOiA+CiAgICAgICVcVmlnbmV0dGVJbmRleEVudHJ5e1dyaXRpbmcgVmlnbmV0dGUgd2l0aCB0aGUgJ21pbmlkb3duJyBQYWNrYWdlfQogICAgICAlXFZpZ25ldHRlRW5naW5le2tuaXRyOjpybWFya2Rvd259CiAgICAgICVcVmlnbmV0dGVFbmNvZGluZ3tVVEYtOH0KICAgIC0tLQogICAgYGBgCjMuIFdyaXRlIGJvZHkKCiMjIERldGFpbHMgb24gdGhlIFlBTUwgZnJvbnQgbWF0dGVyCgpPbmx5IHRoZSBzcGVjaWFsIHRoaW5nIGlzIHRoZSBZQU1MIGZyb250IG1hdHRlci4KTW9zdCBpbXBvcnRhbnQgdGhpbmdzIGFyZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIGluIHRoZSBgb3V0cHV0YCBrZXksIGFuZCBgJVxWaWduZXR0ZUVuZ2luZXtrbml0cjo6cm1hcmtkb3dufWAgaW4gdGhlIGB2aWduZXR0ZWAga2V5LgpUaGVzZSB0d28gZGVjbGFyZXMgdGhlIHZpZ25ldHRlIHRvIGJlIHJlbmRlcmVkIHdpdGggKiptaW5pZG93bioqIHBhY2thZ2UuCgpUaGUgb3V0cHV0IGZvcm1hdCBjYW4gYmUgY3VzdG9taXplZCBhcyB1c3VhbCBpbiB0aGUgUiBNYXJrZG93bi4KQnJlYWsgbGluZXMsIGluZGVudCwgYW5kIHNwZWNpZnkgYXJndW1lbnRzIGxpa2UgYmVsb3cuCgpgYGB5YW1sCm91dHB1dDoKICBtaW5pZG93bjo6bWluaV9kb2N1bWVudDoKICAgIGZyYW1ld29yazogc2FrdXJhCiAgICB0aGVtZTogZGVmYXVsdAogICAgdG9jOiB0cnVlCiAgICB0b2NfZmxvYXQ6IHRydWUKICAgIHRvY19oaWdobGlnaHQ6IHRydWUKICAgIGNvZGVfZm9sZGluZzogImhpZGUiCiAgICByZXN1bHRzX2ZvbGRpbmc6ICJzaG93IgogICAgdGFic2V0OiB0cnVlCiAgICBjb2RlX2Rvd25sb2FkOiB0cnVlCiAgICBtYXRoOiAia2F0ZXgiCmBgYAoKTm90ZSB0aGF0IHRoZSBgZnJhbWV3b3JrYCBhbmQgYHRoZW1lYCBrZXlzIGNvbnRyb2wgYXBwZWFyYW5jZSBvZiB0aGUgcmVuZGVyZWQgZG9jdW1lbnQuClRoZSBkZWZhdWx0IGZyYW1ld29yayBpcyAic2FrdXJhIiwgYnV0IHRoZXJlIGFyZSBzb21lIG1vcmUgbGlrZSAid2F0ZXIiIGFuZCAic3Bjc3MiLgpFYWNoIGZyYW1ld29ya3MgYWxzbyBoYXZlIHRoZWlyIG93biB0aGVtZXMuCkZvciBtb3JlIGRldGFpbHMgb24gb3B0aW9ucywgdmlzaXQgPGh0dHBzOi8vbWluaWRvd24uYXR1c3kubmV0Lz4uClRoaXMgcGFnZSBhbHNvIHByb3ZpZGVzIGV4YW1wbGVzIG9mIGFsbCB0aGUgY29tYmluYXRpb25zIG9mIGZyYW1ld29ya3MgYW5kIHRoZW1lcy4KClRoZSBvdGhlciBjb250ZW50cyBvZiB0aGUgWUFNTCBmcm9udCBtYXR0ZXIgYXJlIG5vdCAqKm1pbmlkb3duKiotc3BlY2lmaWMuXltodHRwczovL2NyYW4uci1wcm9qZWN0Lm9yZy9kb2MvbWFudWFscy9yLXJlbGVhc2UvUi1leHRzLmh0bWwjV3JpdGluZy1wYWNrYWdlLXZpZ25ldHRlc10uCgojIFdoeSBhdXRob3JpbmcgdmlnbmV0dGVzIHdpdGggdGhlIG1pbmlkb3duIHBhY2thZ2U/CgpCZWNhdXNlIHRoZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIGZ1bmN0aW9uIHByb3ZpZGVzIHNpbXBsZSBhbmQgbGlnaHR3ZWlnaHQgeWV0IHBvd2VyZnVsIEhUTUwgZm9ybWF0LgoKVGhlICoqcm1hcmtkb3duKiogcGFja2FnZSBwcm92aWRlcyB0aGUgYGh0bWxfdmlnbmV0dGVgIGZ1bmN0aW9uIGFzIGEgbGlnaHR3ZWlnaHQgZm9ybWF0IHN1aXRhYmxlIGZvciBjcmVhdGluZyB2aWduZXR0ZXMuCkFzIHRoZSBkb2N1bWVudCBzYXlzLCB0aGUgYGh0bWxfdmlnbmV0dGVgIHByb3ZpZGVzIG11Y2ggbGlnaHRlciBkb2N1bWVudCB0aGFuIHRoZSBgaHRtbF9kb2N1bWVudGAgZG9jdW1lbnQuClRoZSBgaHRtbF92aWduZXR0ZWAgbG9zZXMgd2VpZ2h0IGJ5IG9taXR0aW5nIEJvb3RzdHJhcCBhbmQgalF1ZXJ5IGZyb20gYGh0bWxfZG9jdW1lbnRgLCB3aGljaCBpbiB0dXJuIGxvc2VzIHNvbWUgbmljZSBhcHBlYXJhbmNlIGFuZCBmZWF0dXJlcyBzdWNoIGFzIGZsb2F0aW5nIFRvQyBhbmQgY29kZSBmb2xkaW5nLgpIb3dldmVyLCBzdWNoIGZlYXR1cmVzIGFyZSB2ZXJ5IGltcG9ydGFudCBmb3IgbG9uZyBmb3JtYXQgZG9jdW1lbnRzLCBpLmUuIHZpZ25ldHRlcy4KClRoZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIHRyaWVzIHRvIHByb3ZpZGUgYXMgcmljaCBmZWF0dXJlcyBhcyBgaHRtbF9kb2N1bWVudGAuCkF0IHRoZSBzYW1lIHRpbWUsIGl0IHRyaWVzIHRvIGJlIGFzIGxpZ2h0IGFzIGBodG1sX3ZpZ25ldHRlYC4KCiMjIFJpY2ggb3B0LWluIGZlYXR1cmVzCgpBbG1vc3QgYWxsIGZlYXR1cmVzIGFyZSBvcHQtaW4gaW4gdGhlIGBtaW5pZG93bjo6bWluaV9kb2N1bWVudGAgZnVuY3Rpb24uCkF1dGhvcnMgY2FuIGNob3NlIHdoaWNoIGZlYXR1cmUgdG8gYWRkIHdpdGggYSBzdWJ0bGUgd2VpZ2h0IHZpYSB0aGUgWUFNTCBmcm9udCBtYXR0ZXIuCkZvciBleGFtcGxlLAoKYGBgeWFtbApvdXRwdXQ6CiAgbWluaWRvd246Om1pbmlfZG9jdW1lbnQ6CiAgICB0b2M6IHRydWUKICAgIHRvY19mbG9hdDogdHJ1ZQogICAgdG9jX2hpZ2hsaWdodDogdHJ1ZQogICAgY29kZV9mb2xkaW5nOiAiaGlkZSIKICAgIHJlc3VsdHNfZm9sZGluZzogInNob3ciCiAgICB0YWJzZXQ6IHRydWUKICAgIGNvZGVfZG93bmxvYWQ6IHRydWUKICAgIG1hdGg6ICJrYXRleCIKYGBgCgpGb3IgbW9yZSBkZXRhaWxzLCByZWZlciBhIGhlbHAgZG9jdW1lbnQgYnkgYD9taW5pZG93bjo6bWluaV9kb2N1bWV3bnRgLCBvciB2aXNpdCBhIGRvY3VtZW50IHBhZ2Ugd2hpY2ggaXMgYSBsaXZlIGV4YW1wbGUgYXQgdGhlIHNhbWUgdGltZTogPGh0dHBzOi8vbWluaWRvd24uYXR1c3kubmV0Lz4uCgojIyBMaWdodCB3ZWlnaHQKClRoaXMgc2VjdGlvbiBjb21wYXJlcyB0aGUgc2l6ZSBieSBjb21waWxpbmcgdGhpcyBkb2N1bWVudCBpbiB2YXJpZXR5IG9mIGZvcm1hdHMuClRoZXJlIGFyZSB0d28gcmVtYXJrYWJsZSByZXN1bHRzLgoKLSBUaGUgYG1pbmlkb3duOjptaW5pX2RvY3VtZW50YCBmdW5jdGlvbiBjYW4gZXZlbiBiZSBsaWdodGVyIHRoYW4gdGhlIGBodG1sX3ZpZ25ldHRlYCBmdW5jdGlvbiB3aGVuIGBmcmFtZXdvcmsgPSAic3Bjc3MiYCBpcyBjaG9zZW4uCi0gVGhlIGBtaW5pZG93bjo6bWluaV9kb2N1bWVudGAgd2l0aCBmdWxsIGZlYXR1cmVzIGdhaW5zIHZlcnkgc21hbGwgd2VpZ2h0cyAoPCAyMEtCKS4KCgpgYGB7ciByZW5kZXItc2l6ZSwgZWNobz1GQUxTRSwgcmVzdWx0cy5mb2xkaW5nPSJub25lIiwgZXZhbD1leGlzdHMoInBhcmFtcyIpICYmIHBhcmFtcyRldmFsX3JlbmRlciAmJiBybWFya2Rvd246OnBhbmRvY19hdmFpbGFibGUoIjIuNy4yIil9CnJlbmRlcl9zaXplIDwtIGZ1bmN0aW9uKG91dHB1dF9mb3JtYXQgPSBybWFya2Rvd246Omh0bWxfdmlnbmV0dGUoKSkgewogIHRoaXNfcm1kIDwtIGtuaXRyOjpjdXJyZW50X2lucHV0KCkKICB0ZW1wX2h0bWwgPC0gdGVtcGZpbGUoZmlsZWV4dCA9ICIuaHRtbCIpCiAgY2FsbHI6OnJfc2FmZShmdW5jdGlvbiguLi4pIHJtYXJrZG93bjo6cmVuZGVyKC4uLiksCiAgICAgICAgICAgICAgICBhcmdzID0gbGlzdChpbnB1dCA9IHRoaXNfcm1kLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgb3V0cHV0X2Zvcm1hdCA9IG91dHB1dF9mb3JtYXQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBvdXRwdXRfZmlsZSA9IHRlbXBfaHRtbCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBhcmFtcyA9IGxpc3QoZXZhbF9yZW5kZXIgPSBGQUxTRSksCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBxdWlldCA9IFRSVUUpKQogIGZpbGUuc2l6ZSh0ZW1wX2h0bWwpCn0KCmZvcm1hdHMgPC0gbGlzdCgKICBodG1sX3ZpZ25ldHRlID0gcm1hcmtkb3duOjpodG1sX3ZpZ25ldHRlKCksCiAgJ21pbmlfZG9jdW1lbnQoZnJhbWV3b3JrID0gInNwY3NzIiknID0gbWluaWRvd246Om1pbmlfZG9jdW1lbnQoZnJhbWV3b3JrID0gInNwY3NzIiksCiAgIm1pbmlfZG9jdW1lbnQoKSAjIGRlZmF1bHQiID0gbWluaWRvd246Om1pbmlfZG9jdW1lbnQoKSwKICAibWluaV9kb2N1bWVudCB3aXRoIGZ1bGwgZmVhdHVyZXMiID0gbWluaWRvd246Om1pbmlfZG9jdW1lbnQoCiAgICB0b2MgPSBUUlVFLAogICAgdG9jX2Zsb2F0ID0gVFJVRSwKICAgIHRvY19oaWdobGlnaHQgPSBUUlVFLAogICAgY29kZV9mb2xkaW5nID0gImhpZGUiLAogICAgdGFic2V0ID0gVFJVRSwKICAgIGNvZGVfZG93bmxvYWQgPSBUUlVFLAogICAgbWF0aCA9ICJrYXRleCIKICApLAogIGh0bWxfZG9jdW1lbnQgPSBybWFya2Rvd246Omh0bWxfZG9jdW1lbnQoKQopCgprbml0cjo6a2FibGUodGliYmxlOjplbmZyYW1lKAogIHB1cnJyOjptYXBfZGJsKGZvcm1hdHMsIHJlbmRlcl9zaXplKSAvIDEwMDAsCiAgbmFtZSA9ICJmb3JtYXQiLAogIHZhbHVlID0gInNpemUgKEtCKSIKKSkKYGBgCgpgYGB7ciByZWYubGFiZWw9InJlbmRlci1zaXplIiwgZXZhbD1GQUxTRX0KCmBgYAoKCk5vdGUgdGhhdCBpZiB5b3UgYXJlIHJlYWRpbmcgdGhpcyB2aWduZXR0ZSBvbiBDUkFOLCB0aGlzIHBhZ2UgaXMgdGhlIHJlc3VsdCBvZiAibWluaV9kb2N1bWVudCB3aXRoIGZ1bGwgZmVhdHVyZXMuIgpJbiB0aGF0IGNhc2UsIHRoaXMgcGFnZSBpbmNsdWRlcyBleHRyYSB3ZWlnaHQgYnkgcHJvdmlkaW5nIGRvd25sb2FkIGJ1dHRvbiB3aGljaCBlbWJlZHMgc291cmNlIFJtZCBmaWxlIChgciBmaWxlLnNpemUoa25pdHI6OmN1cnJlbnRfaW5wdXQoKSkgLyAxMDAwYEtCKS4K" download="Writing-vignettes-with-minidown.Rmd" class="button">Download Rmd</a>
+  <a href="data:text/x-markdown;base64,LS0tCnRpdGxlOiAiV3JpdGluZyBWaWduZXR0ZXMgd2l0aCB0aGUgJ21pbmlkb3duJyBQYWNrYWdlIgpvdXRwdXQ6IG1pbmlkb3duOjptaW5pX2RvY3VtZW50CnZpZ25ldHRlOiA+CiAgJVxWaWduZXR0ZUluZGV4RW50cnl7V3JpdGluZyBWaWduZXR0ZXMgd2l0aCB0aGUgJ21pbmlkb3duJyBQYWNrYWdlfQogICVcVmlnbmV0dGVFbmdpbmV7a25pdHI6OnJtYXJrZG93bn0KICAlXFZpZ25ldHRlRW5jb2Rpbmd7VVRGLTh9CnBhcmFtczoKICBldmFsX3JlbmRlcjogdHJ1ZQotLS0KCmBgYHtyLCBpbmNsdWRlID0gRkFMU0V9CmtuaXRyOjpvcHRzX2NodW5rJHNldCgKICBjb2xsYXBzZSA9IFRSVUUsCiAgY29tbWVudCA9ICIjPiIKKQpgYGAKClRoZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIGZ1bmN0aW9uIHByb3ZpZGVzIHNpbXBsZSBhbmQgbGlnaHR3ZWlnaHQgeWV0IHBvd2VyZnVsIEhUTUwgZm9ybWF0LgpFdmVuIGlmIGFsbCBmZWF0dXJlcyBhcmUgZW5hYmxlZCwgdGhlIHNpemUgb2YgZG9jdW1lbnQgaXMgY29tcGFyYWJsZSB3aXRoIHRoZSBkZWZhdWx0IGBodG1sX3ZpZ25ldHRlYCBmdW5jdGlvbi4KCiMgSG93IGVhc3kgaXQgaXMhCgpPbmx5IHRoZSBkaWZmZXJlbmNlIGlzIHRoZSBZQU1MIGZyb250bWF0dGVyLgoKIyMgMyBzdGVwcyB0byBnbwoKMS4gQ3JlYXRlIGFuIGBSbWRgIGZpbGUgdW5kZXIgdGhlIGB2aWduZXR0ZXNgIGRpcmVjdG9yeQoyLiBBZGQgYSBZQU1MIGZyb250IG1hdHRlciBzb21ldGhpbmcgbGlrZSBiZWxvdwoKICAgIGBgYHlhbWwKICAgIC0tLQogICAgdGl0bGU6ICJXcml0aW5nIFZpZ25ldHRlIHdpdGggdGhlICdtaW5pZG93bicgUGFja2FnZSIKICAgIG91dHB1dDogbWluaWRvd246Om1pbmlfZG9jdW1lbnQKICAgIHZpZ25ldHRlOiA+CiAgICAgICVcVmlnbmV0dGVJbmRleEVudHJ5e1dyaXRpbmcgVmlnbmV0dGUgd2l0aCB0aGUgJ21pbmlkb3duJyBQYWNrYWdlfQogICAgICAlXFZpZ25ldHRlRW5naW5le2tuaXRyOjpybWFya2Rvd259CiAgICAgICVcVmlnbmV0dGVFbmNvZGluZ3tVVEYtOH0KICAgIC0tLQogICAgYGBgCjMuIFdyaXRlIGJvZHkKCiMjIENvbmZpZ3VyaW5nIGRvY3VtZW50cyAKClRoZSBvdXRwdXQgZm9ybWF0IGNhbiBiZSBjb25maWd1cmVkIGJ5IHRoZSBZQU1MIGZyb250IG1hdHRlciBhbmQgYnkgdGhlIGBfb3V0cHV0LnltbGAgZmlsZS4KTW9zdCBpbXBvcnRhbnQgdGhpbmdzIGFyZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIGluIHRoZSBgb3V0cHV0YCBrZXksIGFuZCBgJVxWaWduZXR0ZUVuZ2luZXtrbml0cjo6cm1hcmtkb3dufWAgaW4gdGhlIGB2aWduZXR0ZWAga2V5LgpUaGVzZSB0d28gZGVjbGFyZXMgdGhlIHZpZ25ldHRlIHRvIGJlIHJlbmRlcmVkIHdpdGggKiptaW5pZG93bioqIHBhY2thZ2UuCgpUaGUgb3V0cHV0IGZvcm1hdCBjYW4gYmUgY3VzdG9taXplZCBhcyB1c3VhbCBpbiB0aGUgUiBNYXJrZG93bi4KQnJlYWsgbGluZXMsIGluZGVudCwgYW5kIHNwZWNpZnkgYXJndW1lbnRzIGxpa2UgYmVsb3cuCkl0IGlzIGFsc28gcG9zc2libGUgdG8gc3BlY2lmeSB0aGUgYXJndW1lbnRzIHZpYSBgdmlnbmV0dGVzL19vdXRwdXQueW1sYC4KSW4gdGhhdCBjYXNlLCBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIHNob3VsZCBiZSB0aGUgdG9wIGxldmVsIGtleSBpbiB0aGUgWUFNTCBmaWxlIChjZi4gW1IgTWFya2Rvd246IFRoZSBEZWZpbml0aXZlIEd1aWRlXShodHRwczovL2Jvb2tkb3duLm9yZy95aWh1aS9ybWFya2Rvd24vYm9va2Rvd24tcHJvamVjdC5odG1sI291dHB1dC55bWwpLgoKYGBgeWFtbApvdXRwdXQ6CiAgbWluaWRvd246Om1pbmlfZG9jdW1lbnQ6CiAgICBmcmFtZXdvcms6IHNha3VyYQogICAgdGhlbWU6IGRlZmF1bHQKICAgIHRvYzogdHJ1ZQogICAgdG9jX2Zsb2F0OiB0cnVlCiAgICB0b2NfaGlnaGxpZ2h0OiB0cnVlCiAgICBjb2RlX2ZvbGRpbmc6ICJoaWRlIgogICAgcmVzdWx0c19mb2xkaW5nOiAic2hvdyIKICAgIHRhYnNldDogdHJ1ZQogICAgY29kZV9kb3dubG9hZDogdHJ1ZQogICAgbWF0aDogImthdGV4IgpgYGAKCk5vdGUgdGhhdCB0aGUgYGZyYW1ld29ya2AgYW5kIGB0aGVtZWAga2V5cyBjb250cm9sIGFwcGVhcmFuY2Ugb2YgdGhlIHJlbmRlcmVkIGRvY3VtZW50LgpUaGUgZGVmYXVsdCBmcmFtZXdvcmsgaXMgInNha3VyYSIsIGJ1dCB0aGVyZSBhcmUgc29tZSBtb3JlIGxpa2UgIndhdGVyIiBhbmQgInNwY3NzIi4KRWFjaCBmcmFtZXdvcmtzIGFsc28gaGF2ZSB0aGVpciBvd24gdGhlbWVzLgpGb3IgbW9yZSBkZXRhaWxzIG9uIG9wdGlvbnMsIHZpc2l0IDxodHRwczovL21pbmlkb3duLmF0dXN5Lm5ldC8+LgpUaGlzIHBhZ2UgYWxzbyBwcm92aWRlcyBleGFtcGxlcyBvZiBhbGwgdGhlIGNvbWJpbmF0aW9ucyBvZiBmcmFtZXdvcmtzIGFuZCB0aGVtZXMuCgpUaGUgb3RoZXIgY29udGVudHMgb2YgdGhlIFlBTUwgZnJvbnQgbWF0dGVyIGFyZSBub3QgKiptaW5pZG93bioqLXNwZWNpZmljLl5baHR0cHM6Ly9jcmFuLnItcHJvamVjdC5vcmcvZG9jL21hbnVhbHMvci1yZWxlYXNlL1ItZXh0cy5odG1sI1dyaXRpbmctcGFja2FnZS12aWduZXR0ZXNdLgoKIyMjIFNoYXJlIAoKIyBXaHkgYXV0aG9yaW5nIHZpZ25ldHRlcyB3aXRoIHRoZSBtaW5pZG93biBwYWNrYWdlPwoKQmVjYXVzZSB0aGUgYG1pbmlkb3duOjptaW5pX2RvY3VtZW50YCBmdW5jdGlvbiBwcm92aWRlcyBzaW1wbGUgYW5kIGxpZ2h0d2VpZ2h0IHlldCBwb3dlcmZ1bCBIVE1MIGZvcm1hdC4KClRoZSAqKnJtYXJrZG93bioqIHBhY2thZ2UgcHJvdmlkZXMgdGhlIGBodG1sX3ZpZ25ldHRlYCBmdW5jdGlvbiBhcyBhIGxpZ2h0d2VpZ2h0IGZvcm1hdCBzdWl0YWJsZSBmb3IgY3JlYXRpbmcgdmlnbmV0dGVzLgpBcyB0aGUgZG9jdW1lbnQgc2F5cywgdGhlIGBodG1sX3ZpZ25ldHRlYCBwcm92aWRlcyBtdWNoIGxpZ2h0ZXIgZG9jdW1lbnQgdGhhbiB0aGUgYGh0bWxfZG9jdW1lbnRgIGRvY3VtZW50LgpUaGUgYGh0bWxfdmlnbmV0dGVgIGxvc2VzIHdlaWdodCBieSBvbWl0dGluZyBCb290c3RyYXAgYW5kIGpRdWVyeSBmcm9tIGBodG1sX2RvY3VtZW50YCwgd2hpY2ggaW4gdHVybiBsb3NlcyBzb21lIG5pY2UgYXBwZWFyYW5jZSBhbmQgZmVhdHVyZXMgc3VjaCBhcyBmbG9hdGluZyBUb0MgYW5kIGNvZGUgZm9sZGluZy4KSG93ZXZlciwgc3VjaCBmZWF0dXJlcyBhcmUgdmVyeSBpbXBvcnRhbnQgZm9yIGxvbmcgZm9ybWF0IGRvY3VtZW50cywgaS5lLiB2aWduZXR0ZXMuCgpUaGUgYG1pbmlkb3duOjptaW5pX2RvY3VtZW50YCB0cmllcyB0byBwcm92aWRlIGFzIHJpY2ggZmVhdHVyZXMgYXMgYGh0bWxfZG9jdW1lbnRgLgpBdCB0aGUgc2FtZSB0aW1lLCBpdCB0cmllcyB0byBiZSBhcyBsaWdodCBhcyBgaHRtbF92aWduZXR0ZWAuCgojIyBSaWNoIG9wdC1pbiBmZWF0dXJlcwoKQWxtb3N0IGFsbCBmZWF0dXJlcyBhcmUgb3B0LWluIGluIHRoZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIGZ1bmN0aW9uLgpBdXRob3JzIGNhbiBjaG9zZSB3aGljaCBmZWF0dXJlIHRvIGFkZCB3aXRoIGEgc3VidGxlIHdlaWdodCB2aWEgdGhlIFlBTUwgZnJvbnQgbWF0dGVyLgpGb3IgZXhhbXBsZSwKCmBgYHlhbWwKb3V0cHV0OgogIG1pbmlkb3duOjptaW5pX2RvY3VtZW50OgogICAgdG9jOiB0cnVlCiAgICB0b2NfZmxvYXQ6IHRydWUKICAgIHRvY19oaWdobGlnaHQ6IHRydWUKICAgIGNvZGVfZm9sZGluZzogImhpZGUiCiAgICByZXN1bHRzX2ZvbGRpbmc6ICJzaG93IgogICAgdGFic2V0OiB0cnVlCiAgICBjb2RlX2Rvd25sb2FkOiB0cnVlCiAgICBtYXRoOiAia2F0ZXgiCmBgYAoKRm9yIG1vcmUgZGV0YWlscywgcmVmZXIgYSBoZWxwIGRvY3VtZW50IGJ5IGA/bWluaWRvd246Om1pbmlfZG9jdW1ld250YCwgb3IgdmlzaXQgYSBkb2N1bWVudCBwYWdlIHdoaWNoIGlzIGEgbGl2ZSBleGFtcGxlIGF0IHRoZSBzYW1lIHRpbWU6IDxodHRwczovL21pbmlkb3duLmF0dXN5Lm5ldC8+LgoKIyMgTGlnaHQgd2VpZ2h0CgpUaGlzIHNlY3Rpb24gY29tcGFyZXMgdGhlIHNpemUgYnkgY29tcGlsaW5nIHRoaXMgZG9jdW1lbnQgaW4gdmFyaWV0eSBvZiBmb3JtYXRzLgpUaGVyZSBhcmUgdHdvIHJlbWFya2FibGUgcmVzdWx0cy4KCi0gVGhlIGBtaW5pZG93bjo6bWluaV9kb2N1bWVudGAgZnVuY3Rpb24gY2FuIGV2ZW4gYmUgbGlnaHRlciB0aGFuIHRoZSBgaHRtbF92aWduZXR0ZWAgZnVuY3Rpb24gd2hlbiBgZnJhbWV3b3JrID0gInNwY3NzImAgaXMgY2hvc2VuLgotIFRoZSBgbWluaWRvd246Om1pbmlfZG9jdW1lbnRgIHdpdGggZnVsbCBmZWF0dXJlcyBnYWlucyB2ZXJ5IHNtYWxsIHdlaWdodHMgKDwgMjBLQikuCgoKYGBge3IgcmVuZGVyLXNpemUsIGVjaG89RkFMU0UsIHJlc3VsdHMuZm9sZGluZz0ibm9uZSIsIGV2YWw9ZXhpc3RzKCJwYXJhbXMiKSAmJiBwYXJhbXMkZXZhbF9yZW5kZXIgJiYgcm1hcmtkb3duOjpwYW5kb2NfYXZhaWxhYmxlKCIyLjcuMiIpfQpyZW5kZXJfc2l6ZSA8LSBmdW5jdGlvbihvdXRwdXRfZm9ybWF0ID0gcm1hcmtkb3duOjpodG1sX3ZpZ25ldHRlKCkpIHsKICB0aGlzX3JtZCA8LSBrbml0cjo6Y3VycmVudF9pbnB1dCgpCiAgdGVtcF9odG1sIDwtIHRlbXBmaWxlKGZpbGVleHQgPSAiLmh0bWwiKQogIGNhbGxyOjpyX3NhZmUoZnVuY3Rpb24oLi4uKSBybWFya2Rvd246OnJlbmRlciguLi4pLAogICAgICAgICAgICAgICAgYXJncyA9IGxpc3QoaW5wdXQgPSB0aGlzX3JtZCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgIG91dHB1dF9mb3JtYXQgPSBvdXRwdXRfZm9ybWF0LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgb3V0cHV0X2ZpbGUgPSB0ZW1wX2h0bWwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBwYXJhbXMgPSBsaXN0KGV2YWxfcmVuZGVyID0gRkFMU0UpLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgcXVpZXQgPSBUUlVFKSkKICBmaWxlLnNpemUodGVtcF9odG1sKQp9Cgpmb3JtYXRzIDwtIGxpc3QoCiAgaHRtbF92aWduZXR0ZSA9IHJtYXJrZG93bjo6aHRtbF92aWduZXR0ZSgpLAogICdtaW5pX2RvY3VtZW50KGZyYW1ld29yayA9ICJzcGNzcyIpJyA9IG1pbmlkb3duOjptaW5pX2RvY3VtZW50KGZyYW1ld29yayA9ICJzcGNzcyIpLAogICJtaW5pX2RvY3VtZW50KCkgIyBkZWZhdWx0IiA9IG1pbmlkb3duOjptaW5pX2RvY3VtZW50KCksCiAgIm1pbmlfZG9jdW1lbnQgd2l0aCBmdWxsIGZlYXR1cmVzIiA9IG1pbmlkb3duOjptaW5pX2RvY3VtZW50KAogICAgdG9jID0gVFJVRSwKICAgIHRvY19mbG9hdCA9IFRSVUUsCiAgICB0b2NfaGlnaGxpZ2h0ID0gVFJVRSwKICAgIGNvZGVfZm9sZGluZyA9ICJoaWRlIiwKICAgIHRhYnNldCA9IFRSVUUsCiAgICBjb2RlX2Rvd25sb2FkID0gVFJVRSwKICAgIG1hdGggPSAia2F0ZXhfc2VydmVyc2lkZSIKICApLAogIGh0bWxfZG9jdW1lbnQgPSBybWFya2Rvd246Omh0bWxfZG9jdW1lbnQoKQopCgprbml0cjo6a2FibGUodGliYmxlOjplbmZyYW1lKAogIHB1cnJyOjptYXBfZGJsKGZvcm1hdHMsIHJlbmRlcl9zaXplKSAvIDEwMDAsCiAgbmFtZSA9ICJmb3JtYXQiLAogIHZhbHVlID0gInNpemUgKEtCKSIKKSkKYGBgCgpgYGB7ciByZWYubGFiZWw9InJlbmRlci1zaXplIiwgZXZhbD1GQUxTRX0KCmBgYAoKCk5vdGUgdGhhdCBpZiB5b3UgYXJlIHJlYWRpbmcgdGhpcyB2aWduZXR0ZSBvbiBDUkFOLCB0aGlzIHBhZ2UgaXMgdGhlIHJlc3VsdCBvZiAibWluaV9kb2N1bWVudCB3aXRoIGZ1bGwgZmVhdHVyZXMuIgpJbiB0aGF0IGNhc2UsIHRoaXMgcGFnZSBpbmNsdWRlcyBleHRyYSB3ZWlnaHQgYnkgcHJvdmlkaW5nIGRvd25sb2FkIGJ1dHRvbiB3aGljaCBlbWJlZHMgc291cmNlIFJtZCBmaWxlIChgciBmaWxlLnNpemUoa25pdHI6OmN1cnJlbnRfaW5wdXQoKSkgLyAxMDAwYEtCKS4K" download="Writing-vignettes-with-minidown.Rmd" class="button">Download Rmd</a>
 </aside>
 <main>
 <header id="title-block-header">
@@ -113,13 +224,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#how-easy-it-is">How easy it is!</a>
-<ul>
+<li><a href="#how-easy-it-is">How easy it is!</a><ul>
 <li><a href="#steps-to-go">3 steps to go</a></li>
-<li><a href="#details-on-the-yaml-front-matter">Details on the YAML front matter</a></li>
+<li><a href="#configuring-documents">Configuring documents</a><ul>
+<li><a href="#share">Share</a></li>
 </ul></li>
-<li><a href="#why-authoring-vignettes-with-the-minidown-package">Why authoring vignettes with the minidown package?</a>
-<ul>
+</ul></li>
+<li><a href="#why-authoring-vignettes-with-the-minidown-package">Why authoring vignettes with the minidown package?</a><ul>
 <li><a href="#rich-opt-in-features">Rich opt-in features</a></li>
 <li><a href="#light-weight">Light weight</a></li>
 </ul></li>
@@ -135,35 +246,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol type="1">
 <li><p>Create an <code>Rmd</code> file under the <code>vignettes</code> directory</p></li>
 <li><p>Add a YAML front matter something like below</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Writing Vignette with the &#39;minidown&#39; Package&quot;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> minidown::mini_document</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">vignette</span><span class="kw">: </span><span class="ch">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  %\VignetteIndexEntry{Writing Vignette with the &#39;minidown&#39; Package}</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  %\VignetteEngine{knitr::rmarkdown}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  %\VignetteEncoding{UTF-8}</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Writing Vignette with the &#39;minidown&#39; Package&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> minidown::mini_document</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">vignette</span><span class="kw">: </span><span class="ch">&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  %\VignetteIndexEntry{Writing Vignette with the &#39;minidown&#39; Package}</span>
+<span id="cb1-6"><a href="#cb1-6"></a>  %\VignetteEngine{knitr::rmarkdown}</span>
+<span id="cb1-7"><a href="#cb1-7"></a>  %\VignetteEncoding{UTF-8}</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="pp">---</span></span></code></pre></div></li>
 <li><p>Write body</p></li>
 </ol>
 </section>
-<section id="details-on-the-yaml-front-matter" class="level2">
-<h2>Details on the YAML front matter</h2>
-<p>Only the special thing is the YAML front matter. Most important things are <code>minidown::mini_document</code> in the <code>output</code> key, and <code>%\VignetteEngine{knitr::rmarkdown}</code> in the <code>vignette</code> key. These two declares the vignette to be rendered with <strong>minidown</strong> package.</p>
-<p>The output format can be customized as usual in the R Markdown. Break lines, indent, and specify arguments like below.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  minidown:</span><span class="fu">:mini_document</span><span class="kw">:</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">framework</span><span class="kw">:</span><span class="at"> sakura</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_highlight</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hide&quot;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">results_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;show&quot;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">tabset</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">math</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;katex&quot;</span></span></code></pre></div>
+<section id="configuring-documents" class="level2">
+<h2>Configuring documents</h2>
+<p>The output format can be configured by the YAML front matter and by the <code>_output.yml</code> file. Most important things are <code>minidown::mini_document</code> in the <code>output</code> key, and <code>%\VignetteEngine{knitr::rmarkdown}</code> in the <code>vignette</code> key. These two declares the vignette to be rendered with <strong>minidown</strong> package.</p>
+<p>The output format can be customized as usual in the R Markdown. Break lines, indent, and specify arguments like below. It is also possible to specify the arguments via <code>vignettes/_output.yml</code>. In that case, <code>minidown::mini_document</code> should be the top level key in the YAML file (cf. <a href="https://bookdown.org/yihui/rmarkdown/bookdown-project.html#output.yml">R Markdown: The Definitive Guide</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="at">  minidown:</span><span class="fu">:mini_document</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">    </span><span class="fu">framework</span><span class="kw">:</span><span class="at"> sakura</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="at">    </span><span class="fu">toc_highlight</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hide&quot;</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="at">    </span><span class="fu">results_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;show&quot;</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="at">    </span><span class="fu">tabset</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="at">    </span><span class="fu">math</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;katex&quot;</span></span></code></pre></div>
 <p>Note that the <code>framework</code> and <code>theme</code> keys control appearance of the rendered document. The default framework is “sakura”, but there are some more like “water” and “spcss”. Each frameworks also have their own themes. For more details on options, visit <a href="https://minidown.atusy.net/" class="uri">https://minidown.atusy.net/</a>. This page also provides examples of all the combinations of frameworks and themes.</p>
 <p>The other contents of the YAML front matter are not <strong>minidown</strong>-specific.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<section id="share" class="level3">
+<h3>Share</h3>
+</section>
 </section>
 </section>
 <section id="why-authoring-vignettes-with-the-minidown-package" class="level1">
@@ -174,16 +288,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="rich-opt-in-features" class="level2">
 <h2>Rich opt-in features</h2>
 <p>Almost all features are opt-in in the <code>minidown::mini_document</code> function. Authors can chose which feature to add with a subtle weight via the YAML front matter. For example,</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">output</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="at">  minidown:</span><span class="fu">:mini_document</span><span class="kw">:</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">toc_highlight</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hide&quot;</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">results_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;show&quot;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">tabset</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">math</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;katex&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">output</span><span class="kw">:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  minidown:</span><span class="fu">:mini_document</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="at">    </span><span class="fu">toc_float</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="fu">toc_highlight</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="at">    </span><span class="fu">code_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;hide&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="at">    </span><span class="fu">results_folding</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;show&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="at">    </span><span class="fu">tabset</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="at">    </span><span class="fu">code_download</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="at">    </span><span class="fu">math</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;katex&quot;</span></span></code></pre></div>
 <p>For more details, refer a help document by <code>?minidown::mini_documewnt</code>, or visit a document page which is a live example at the same time: <a href="https://minidown.atusy.net/" class="uri">https://minidown.atusy.net/</a>.</p>
 </section>
 <section id="light-weight" class="level2">
@@ -203,62 +317,62 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">html_vignette</td>
-<td style="text-align: right;">27.395</td>
+<td style="text-align: right;">23.601</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">mini_document(framework = “spcss”)</td>
-<td style="text-align: right;">26.894</td>
+<td style="text-align: right;">22.416</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">mini_document() # default</td>
-<td style="text-align: right;">30.289</td>
+<td style="text-align: right;">24.421</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">mini_document with full features</td>
-<td style="text-align: right;">45.253</td>
+<td style="text-align: right;">37.683</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">html_document</td>
-<td style="text-align: right;">736.068</td>
+<td style="text-align: right;">629.895</td>
 </tr>
 </tbody>
 </table>
 </details>
 <details class="chunk-details"><summary class="chunk-summary">Source</summary>
-<div class="sourceCode" id="cb4" data-summary="Source"><pre class="sourceCode r details"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>render_size <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">output_format =</span> rmarkdown<span class="sc">::</span><span class="fu">html_vignette</span>()) {</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  this_rmd <span class="ot">&lt;-</span> knitr<span class="sc">::</span><span class="fu">current_input</span>()</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  temp_html <span class="ot">&lt;-</span> <span class="fu">tempfile</span>(<span class="at">fileext =</span> <span class="st">&quot;.html&quot;</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  callr<span class="sc">::</span><span class="fu">r_safe</span>(<span class="cf">function</span>(...) rmarkdown<span class="sc">::</span><span class="fu">render</span>(...),</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">args =</span> <span class="fu">list</span>(<span class="at">input =</span> this_rmd,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>                            <span class="at">output_format =</span> output_format,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>                            <span class="at">output_file =</span> temp_html,</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>                            <span class="at">params =</span> <span class="fu">list</span>(<span class="at">eval_render =</span> <span class="cn">FALSE</span>),</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>                            <span class="at">quiet =</span> <span class="cn">TRUE</span>))</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">file.size</span>(temp_html)</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>formats <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">html_vignette =</span> rmarkdown<span class="sc">::</span><span class="fu">html_vignette</span>(),</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;mini_document(framework = &quot;spcss&quot;)&#39;</span> <span class="ot">=</span> minidown<span class="sc">::</span><span class="fu">mini_document</span>(<span class="at">framework =</span> <span class="st">&quot;spcss&quot;</span>),</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;mini_document() # default&quot;</span> <span class="ot">=</span> minidown<span class="sc">::</span><span class="fu">mini_document</span>(),</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;mini_document with full features&quot;</span> <span class="ot">=</span> minidown<span class="sc">::</span><span class="fu">mini_document</span>(</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">toc =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">toc_float =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">toc_highlight =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">code_folding =</span> <span class="st">&quot;hide&quot;</span>,</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">tabset =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">code_download =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">math =</span> <span class="st">&quot;katex&quot;</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  ),</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">html_document =</span> rmarkdown<span class="sc">::</span><span class="fu">html_document</span>()</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(tibble<span class="sc">::</span><span class="fu">enframe</span>(</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  purrr<span class="sc">::</span><span class="fu">map_dbl</span>(formats, render_size) <span class="sc">/</span> <span class="dv">1000</span>,</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;format&quot;</span>,</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="st">&quot;size (KB)&quot;</span></span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>))</span></code></pre></div>
-</details><p>Note that if you are reading this vignette on CRAN, this page is the result of “mini_document with full features.” In that case, this page includes extra weight by providing download button which embeds source Rmd file (5.778KB).</p>
+<div class="sourceCode" id="cb4" data-summary="Source"><pre class="sourceCode r details"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>render_size &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">output_format =</span> rmarkdown<span class="op">::</span><span class="kw">html_vignette</span>()) {</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  this_rmd &lt;-<span class="st"> </span>knitr<span class="op">::</span><span class="kw">current_input</span>()</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  temp_html &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">&quot;.html&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  callr<span class="op">::</span><span class="kw">r_safe</span>(<span class="cf">function</span>(...) rmarkdown<span class="op">::</span><span class="kw">render</span>(...),</span>
+<span id="cb4-5"><a href="#cb4-5"></a>                <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">input =</span> this_rmd,</span>
+<span id="cb4-6"><a href="#cb4-6"></a>                            <span class="dt">output_format =</span> output_format,</span>
+<span id="cb4-7"><a href="#cb4-7"></a>                            <span class="dt">output_file =</span> temp_html,</span>
+<span id="cb4-8"><a href="#cb4-8"></a>                            <span class="dt">params =</span> <span class="kw">list</span>(<span class="dt">eval_render =</span> <span class="ot">FALSE</span>),</span>
+<span id="cb4-9"><a href="#cb4-9"></a>                            <span class="dt">quiet =</span> <span class="ot">TRUE</span>))</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="kw">file.size</span>(temp_html)</span>
+<span id="cb4-11"><a href="#cb4-11"></a>}</span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a>formats &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
+<span id="cb4-14"><a href="#cb4-14"></a>  <span class="dt">html_vignette =</span> rmarkdown<span class="op">::</span><span class="kw">html_vignette</span>(),</span>
+<span id="cb4-15"><a href="#cb4-15"></a>  <span class="st">&#39;mini_document(framework = &quot;spcss&quot;)&#39;</span> =<span class="st"> </span>minidown<span class="op">::</span><span class="kw">mini_document</span>(<span class="dt">framework =</span> <span class="st">&quot;spcss&quot;</span>),</span>
+<span id="cb4-16"><a href="#cb4-16"></a>  <span class="st">&quot;mini_document() # default&quot;</span> =<span class="st"> </span>minidown<span class="op">::</span><span class="kw">mini_document</span>(),</span>
+<span id="cb4-17"><a href="#cb4-17"></a>  <span class="st">&quot;mini_document with full features&quot;</span> =<span class="st"> </span>minidown<span class="op">::</span><span class="kw">mini_document</span>(</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    <span class="dt">toc =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb4-19"><a href="#cb4-19"></a>    <span class="dt">toc_float =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb4-20"><a href="#cb4-20"></a>    <span class="dt">toc_highlight =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb4-21"><a href="#cb4-21"></a>    <span class="dt">code_folding =</span> <span class="st">&quot;hide&quot;</span>,</span>
+<span id="cb4-22"><a href="#cb4-22"></a>    <span class="dt">tabset =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb4-23"><a href="#cb4-23"></a>    <span class="dt">code_download =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb4-24"><a href="#cb4-24"></a>    <span class="dt">math =</span> <span class="st">&quot;katex_serverside&quot;</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a>  ),</span>
+<span id="cb4-26"><a href="#cb4-26"></a>  <span class="dt">html_document =</span> rmarkdown<span class="op">::</span><span class="kw">html_document</span>()</span>
+<span id="cb4-27"><a href="#cb4-27"></a>)</span>
+<span id="cb4-28"><a href="#cb4-28"></a></span>
+<span id="cb4-29"><a href="#cb4-29"></a>knitr<span class="op">::</span><span class="kw">kable</span>(tibble<span class="op">::</span><span class="kw">enframe</span>(</span>
+<span id="cb4-30"><a href="#cb4-30"></a>  purrr<span class="op">::</span><span class="kw">map_dbl</span>(formats, render_size) <span class="op">/</span><span class="st"> </span><span class="dv">1000</span>,</span>
+<span id="cb4-31"><a href="#cb4-31"></a>  <span class="dt">name =</span> <span class="st">&quot;format&quot;</span>,</span>
+<span id="cb4-32"><a href="#cb4-32"></a>  <span class="dt">value =</span> <span class="st">&quot;size (KB)&quot;</span></span>
+<span id="cb4-33"><a href="#cb4-33"></a>))</span></code></pre></div>
+</details><p>Note that if you are reading this vignette on CRAN, this page is the result of “mini_document with full features.” In that case, this page includes extra weight by providing download button which embeds source Rmd file (5.91KB).</p>
 </section>
 </section>
 <section class="footnotes" role="doc-endnotes">
